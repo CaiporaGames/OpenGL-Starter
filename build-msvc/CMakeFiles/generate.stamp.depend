@@ -13,6 +13,10 @@ C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/glfw3/glfw3Confi
 C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/glfw3/glfw3Targets-debug.cmake
 C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/glfw3/glfw3Targets-release.cmake
 C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/glfw3/glfw3Targets.cmake
+C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/glm/glmConfig-debug.cmake
+C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/glm/glmConfig-release.cmake
+C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/glm/glmConfig.cmake
+C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/glm/glmConfigVersion.cmake
 C:/Dev/glfw-no-api/vcpkg.json
 C:/mingw64/share/cmake-4.0/Modules/CMakeCXXCompiler.cmake.in
 C:/mingw64/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp

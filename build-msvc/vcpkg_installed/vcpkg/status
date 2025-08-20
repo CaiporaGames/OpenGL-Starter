@@ -57,3 +57,13 @@ Abi: 1c60051198520da2678348e21c42dd29148822f0edd544faf573092b0689e24d
 Description: GLFW is a free, Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development. It provides a simple, platform-independent API for creating windows, contexts and surfaces, reading input, handling events, etc.
 Status: install ok installed
 
+Package: glm
+Version: 1.0.1
+Port-Version: 3
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 0d712b6bd0e6aa35c7a5606b1bd2746f72a1d26c8456783274ac079b581a1941
+Description: OpenGL Mathematics (GLM)
+Status: install ok installed
+

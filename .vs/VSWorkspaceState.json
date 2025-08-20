@@ -7,11 +7,16 @@
   },
   "ExpandedNodes": [
     "",
-    "\\include\\app",
+    "\\assets",
+    "\\include",
     "\\include\\gfx",
+    "\\include\\thirdparty",
+    "\\shaders",
+    "\\src",
     "\\src\\app",
-    "\\src\\gfx"
+    "\\src\\gfx",
+    "\\src\\thirdparty"
   ],
-  "SelectedNode": "\\vcpkg.json",
+  "SelectedNode": "\\src\\gfx\\Shader.cpp",
   "PreviewInSolutionExplorer": false
 }

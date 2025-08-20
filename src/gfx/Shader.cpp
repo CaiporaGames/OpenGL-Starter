@@ -1,58 +1,100 @@
 #include "gfx/Shader.hpp"
-#include <vector>
 #include <fstream>
 #include <sstream>
-#include <cstdio>
+#include <iostream>
+#include <vector>
 
-ShaderProgram::~ShaderProgram() {
-	if (program_) glDeleteProgram(program_);
+bool ShaderProgram::readTextFile(const char* path, std::string& out) {
+    std::ifstream f(path, std::ios::binary);
+    if (!f) {
+        std::cerr << "[Shader] Failed to open file: " << path << "\n";
+        return false;
+    }
+    std::ostringstream ss;
+    ss << f.rdbuf();
+    out = ss.str();
+    return true;
 }
-bool ShaderProgram::ensureCreated() {
-	if (program_ == 0) program_ = glCreateProgram();
-	return program_ != 0;
+
+bool ShaderProgram::compile(GLenum type, const std::string& src, GLuint& outShader, std::string& log) {
+    outShader = glCreateShader(type);
+    const char* ptr = src.c_str();
+    glShaderSource(outShader, 1, &ptr, nullptr);
+    glCompileShader(outShader);
+
+    GLint ok = GL_FALSE;
+    glGetShaderiv(outShader, GL_COMPILE_STATUS, &ok);
+    if (!ok) {
+        GLint len = 0;
+        glGetShaderiv(outShader, GL_INFO_LOG_LENGTH, &len);
+        std::vector<GLchar> buf(static_cast<size_t>(len > 1 ? len : 1));
+        glGetShaderInfoLog(outShader, len, nullptr, buf.data());
+        log.assign(buf.begin(), buf.end());
+        glDeleteShader(outShader);
+        outShader = 0;
+        return false;
+    }
+    return true;
 }
-bool ShaderProgram::readFile(const char* path, std::string& out) {
-	std::ifstream f(path, std::ios::in | std::ios::binary);
-	if (!f) { std::fprintf(stderr, "Could not open %s\n", path); return false; }
-	std::ostringstream ss; ss << f.rdbuf(); out = ss.str(); return true;
+
+bool ShaderProgram::link(GLuint prog, GLuint vs, GLuint fs, std::string& log) {
+    glAttachShader(prog, vs);
+    glAttachShader(prog, fs);
+    glLinkProgram(prog);
+
+    GLint ok = GL_FALSE;
+    glGetProgramiv(prog, GL_LINK_STATUS, &ok);
+    if (!ok) {
+        GLint len = 0;
+        glGetProgramiv(prog, GL_INFO_LOG_LENGTH, &len);
+        std::vector<GLchar> buf(static_cast<size_t>(len > 1 ? len : 1));
+        glGetProgramInfoLog(prog, len, nullptr, buf.data());
+        log.assign(buf.begin(), buf.end());
+        return false;
+    }
+    return true;
 }
-bool ShaderProgram::checkShader(GLuint sh, const char* label) {
-	GLint ok = 0; glGetShaderiv(sh, GL_COMPILE_STATUS, &ok);
-	if (ok) return true;
-	GLint len = 0; glGetShaderiv(sh, GL_INFO_LOG_LENGTH, &len);
-	std::vector<char> buf(len ? len : 1); glGetShaderInfoLog(sh, len, nullptr, buf.data());
-	std::fprintf(stderr, "[SH COMPILE %s]\n%s\n", label, buf.data());
-	return false;
+
+bool ShaderProgram::loadFromFiles(const char* vsPath, const char* fsPath) {
+    // Clear any previous program
+    destroy();
+
+    std::string vsrc, fsrc;
+    if (!readTextFile(vsPath, vsrc)) return false;
+    if (!readTextFile(fsPath, fsrc)) return false;
+
+    GLuint vs = 0, fs = 0;
+    std::string log;
+
+    if (!compile(GL_VERTEX_SHADER, vsrc, vs, log)) {
+        std::cerr << "[Shader] Vertex compile error (" << vsPath << "):\n" << log << "\n";
+        return false;
+    }
+    if (!compile(GL_FRAGMENT_SHADER, fsrc, fs, log)) {
+        std::cerr << "[Shader] Fragment compile error (" << fsPath << "):\n" << log << "\n";
+        if (vs) glDeleteShader(vs);
+        return false;
+    }
+
+    m_id = glCreateProgram();
+    if (!link(m_id, vs, fs, log)) {
+        std::cerr << "[Shader] Link error:\n" << log << "\n";
+        glDeleteShader(vs);
+        glDeleteShader(fs);
+        glDeleteProgram(m_id);
+        m_id = 0;
+        return false;
+    }
+
+    // Once linked, shader objects can be deleted.
+    glDeleteShader(vs);
+    glDeleteShader(fs);
+    return true;
 }
-bool ShaderProgram::checkProgram(GLuint prg, const char* label) {
-	GLint ok = 0; glGetProgramiv(prg, GL_LINK_STATUS, &ok);
-	if (ok) return true;
-	GLint len = 0; glGetProgramiv(prg, GL_INFO_LOG_LENGTH, &len);
-	std::vector<char> buf(len ? len : 1); glGetProgramInfoLog(prg, len, nullptr, buf.data());
-	std::fprintf(stderr, "[PRG LINK %s]\n%s\n", label, buf.data());
-	return false;
-}
-bool ShaderProgram::compile(GLenum type, const std::string& src, GLuint& out) {
-	out = glCreateShader(type);
-	const char* p = src.c_str();
-	glShaderSource(out, 1, &p, nullptr);
-	glCompileShader(out);
-	return checkShader(out, type == GL_VERTEX_SHADER ? "VS" : "FS");
-}
-bool ShaderProgram::attachFromFile(GLenum type, const char* path) {
-	if (!ensureCreated()) return false;
-	std::string src;
-	if (!readFile(path, src)) return false;
-	GLuint sh = 0;
-	if (!compile(type, src, sh)) { glDeleteShader(sh); return false; }
-	glAttachShader(program_, sh);
-	glDeleteShader(sh);
-	return true;
-}
-bool ShaderProgram::link() {
-	glLinkProgram(program_);
-	return checkProgram(program_, "LINK");
-}
-GLint ShaderProgram::uniform(const char* name) const {
-	return glGetUniformLocation(program_, name);
+
+void ShaderProgram::destroy() {
+    if (m_id) {
+        glDeleteProgram(m_id);
+        m_id = 0;
+    }
 }

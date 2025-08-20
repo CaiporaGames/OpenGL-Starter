@@ -253,6 +253,9 @@ glfw_no_api_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 glfw_no_api_SOURCE_DIR:STATIC=C:/Dev/glfw-no-api
 
+//The directory containing a CMake configuration file for glm.
+glm_DIR:PATH=C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/glm
+
 
 ########################
 # INTERNAL cache entries

@@ -36,6 +36,10 @@ bool App::init(int w, int h, const char* title) {
     glfwSwapInterval(1);
     glfwSetKeyCallback(window_, App::onKey);
 
+    // (optional but recommended for PNG with transparency)
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
     // Center window (optional)
     GLFWmonitor* mon = glfwGetPrimaryMonitor();
     int ax, ay, aw, ah; glfwGetMonitorWorkarea(mon, &ax, &ay, &aw, &ah);
@@ -43,8 +47,12 @@ bool App::init(int w, int h, const char* title) {
     glfwSetWindowPos(window_, ax + (aw - ww) / 2, ay + (ah - wh) / 2);
 
     // init renderer (loads shaders, VBO/VAO)
-    if (!renderer_.init("shaders/triangle.vert", "shaders/triangle.frag"))
+    if (!renderer_.init("shaders/sprite.vert", "shaders/sprite.frag", "assets/quad.png"))
         return false;
+
+    // (optional starting placement in pixels)
+    renderer_.setPosition(40.0f, 40.0f);
+    renderer_.setSize(256.0f, 256.0f);
 
     std::printf("Renderer  : %s\n", (const char*)glGetString(GL_RENDERER));
     std::printf("GL Version: %s\n", (const char*)glGetString(GL_VERSION));
@@ -60,7 +68,7 @@ void App::run() {
         glClearColor(0.07f, 0.08f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        renderer_.draw();
+        renderer_.draw(fbw, fbh);
 
         glfwSwapBuffers(window_);
     }
