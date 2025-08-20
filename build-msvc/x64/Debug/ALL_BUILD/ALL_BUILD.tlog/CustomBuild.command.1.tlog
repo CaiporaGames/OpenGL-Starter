@@ -1,0 +1,10 @@
+^C:\DEV\GLFW-NO-API\CMAKELISTS.TXT
+setlocal
+C:\mingw64\bin\cmake.exe -SC:/Dev/glfw-no-api -BC:/Dev/glfw-no-api/build-msvc --check-stamp-file C:/Dev/glfw-no-api/build-msvc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

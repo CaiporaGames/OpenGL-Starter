@@ -1,0 +1,71 @@
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# --- Visual Studio / MSVC ---
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+ipch/
+*.ipch
+*.VC.db
+*.VC.VC.opendb
+*.opendb
+
+# --- CMake build trees (out-of-source recommended) ---
+build/
+build-*/
+build_*/
+build-msvc/
+out/
+out-*/
+
+# If someone accidentally builds in-source, ignore these too:
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+
+# VS CMake integration: keep CMakePresets.json (project), ignore *User* presets
+CMakeUserPresets.json
+
+# --- Binaries & intermediates ---
+*.exe
+*.dll
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.obj
+*.iobj
+*.ipdb
+*.idb
+*.log
+
+# --- Archives / temp ---
+*.7z
+*.zip
+*.tar
+*.gz
+*.rar
+*.tmp
+*.temp
+*.cache
+
+# --- vcpkg (manifest mode keeps deps outside; if a local vcpkg_installed appears, ignore it) ---
+vcpkg_installed/
+packages/
+
+# --- VS Code (optional): keep project config if you use it, otherwise ignore the folder ---
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json

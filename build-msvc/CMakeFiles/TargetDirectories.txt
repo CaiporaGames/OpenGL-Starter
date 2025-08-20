@@ -1,0 +1,4 @@
+C:/Dev/glfw-no-api/build-msvc/CMakeFiles/app_core.dir
+C:/Dev/glfw-no-api/build-msvc/CMakeFiles/glfw_no_api.dir
+C:/Dev/glfw-no-api/build-msvc/CMakeFiles/ALL_BUILD.dir
+C:/Dev/glfw-no-api/build-msvc/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,30 @@
+﻿Step 0:
+Install the vcpkg, in my case is in C > vcpkg folder.
+Install the glfw3 using vcpkg: C:\vcpkg\vcpkg.exe install glfw3:x64-windows
+
+Create the folder structure:
+glfw-no-api/
+├─ CMakeLists.txt
+├─ vcpkg.json
+└─ src/
+   └─ main.cpp
+
+
+
+
+On powershell from the root folder:PS C:\Dev\glfw-no-api> in this case is the glfw-no-api.
+
+1. Paste this to create the build folder:
+cmake -S . `
+  -B build-msvc `
+  -G "Visual Studio 17 2022" `
+  -A x64 `
+  -DCMAKE_TOOLCHAIN_FILE="C:/vcpkg/scripts/buildsystems/vcpkg.cmake" `
+  -DVCPKG_TARGET_TRIPLET="x64-windows"
+
+
+2. To build run this:
+cmake --build build-msvc --config Release
+.\build-msvc\Release\glfw_no_api.exe
+Is this one. The above I do not know the first line.
+.\build-msvc\Release\glfw_no_api.exe
