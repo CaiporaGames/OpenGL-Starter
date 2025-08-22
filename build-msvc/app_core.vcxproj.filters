@@ -10,6 +10,9 @@
     <ClCompile Include="C:\Dev\glfw-no-api\src\gfx\TriangleRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\gfx\SpriteBatch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Dev\glfw-no-api\src\thirdparty\stb_image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

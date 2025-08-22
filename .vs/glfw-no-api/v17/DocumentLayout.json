@@ -3,40 +3,60 @@
   "WorkspaceRootPath": "C:\\Dev\\glfw-no-api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\src\\gfx\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\gfx\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\src\\app\\App.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\App.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\vcpkg.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:vcpkg.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\src\\thirdparty\\stb_image.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\thirdparty\\stb_image.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\src\\gfx\\TriangleRenderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\gfx\\TriangleRenderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\include\\gfx\\TriangleRenderer.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:include\\gfx\\TriangleRenderer.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\include\\gfx\\OrthoCamera2D.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:include\\gfx\\OrthoCamera2D.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\include\\app\\App.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:include\\app\\App.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\src\\gfx\\SpriteBatch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\gfx\\SpriteBatch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\include\\gfx\\SpriteBatch.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:include\\gfx\\SpriteBatch.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\shaders\\sprite_batch.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:shaders\\sprite_batch.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\shaders\\sprite_batch.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:shaders\\sprite_batch.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\src\\gfx\\TriangleRenderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\gfx\\TriangleRenderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\src\\gfx\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\gfx\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\vcpkg.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:vcpkg.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\include\\gfx\\TriangleRenderer.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:include\\gfx\\TriangleRenderer.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\shaders\\sprite.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -77,11 +97,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrthoCamera2D.hpp",
+              "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\gfx\\OrthoCamera2D.hpp",
+              "RelativeDocumentMoniker": "include\\gfx\\OrthoCamera2D.hpp",
+              "ToolTip": "C:\\Dev\\glfw-no-api\\include\\gfx\\OrthoCamera2D.hpp",
+              "RelativeToolTip": "include\\gfx\\OrthoCamera2D.hpp",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-22T09:35:37.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SpriteBatch.cpp",
+              "DocumentMoniker": "C:\\Dev\\glfw-no-api\\src\\gfx\\SpriteBatch.cpp",
+              "RelativeDocumentMoniker": "src\\gfx\\SpriteBatch.cpp",
+              "ToolTip": "C:\\Dev\\glfw-no-api\\src\\gfx\\SpriteBatch.cpp",
+              "RelativeToolTip": "src\\gfx\\SpriteBatch.cpp",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAAAL0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-21T08:27:08.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SpriteBatch.hpp",
+              "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\gfx\\SpriteBatch.hpp",
+              "RelativeDocumentMoniker": "include\\gfx\\SpriteBatch.hpp",
+              "ToolTip": "C:\\Dev\\glfw-no-api\\include\\gfx\\SpriteBatch.hpp",
+              "RelativeToolTip": "include\\gfx\\SpriteBatch.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-21T08:19:51.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "sprite_batch.frag",
+              "DocumentMoniker": "C:\\Dev\\glfw-no-api\\shaders\\sprite_batch.frag",
+              "RelativeDocumentMoniker": "shaders\\sprite_batch.frag",
+              "ToolTip": "C:\\Dev\\glfw-no-api\\shaders\\sprite_batch.frag",
+              "RelativeToolTip": "shaders\\sprite_batch.frag",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-21T08:19:16.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "sprite_batch.vert",
+              "DocumentMoniker": "C:\\Dev\\glfw-no-api\\shaders\\sprite_batch.vert",
+              "RelativeDocumentMoniker": "shaders\\sprite_batch.vert",
+              "ToolTip": "C:\\Dev\\glfw-no-api\\shaders\\sprite_batch.vert",
+              "RelativeToolTip": "shaders\\sprite_batch.vert",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-21T08:19:02.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "sprite.frag",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\shaders\\sprite.frag",
               "RelativeDocumentMoniker": "shaders\\sprite.frag",
@@ -94,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "sprite.vert",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\shaders\\sprite.vert",
               "RelativeDocumentMoniker": "shaders\\sprite.vert",
@@ -107,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "stb_image.cpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\src\\thirdparty\\stb_image.cpp",
               "RelativeDocumentMoniker": "src\\thirdparty\\stb_image.cpp",
@@ -120,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "stb_image.h",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\thirdparty\\stb_image.h",
               "RelativeDocumentMoniker": "include\\thirdparty\\stb_image.h",
@@ -139,27 +224,27 @@
               "RelativeDocumentMoniker": "CMakeLists.txt",
               "ToolTip": "C:\\Dev\\glfw-no-api\\CMakeLists.txt",
               "RelativeToolTip": "CMakeLists.txt",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAmwB0AAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2025-08-20T12:45:29.617Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "TriangleRenderer.cpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\src\\gfx\\TriangleRenderer.cpp",
               "RelativeDocumentMoniker": "src\\gfx\\TriangleRenderer.cpp",
               "ToolTip": "C:\\Dev\\glfw-no-api\\src\\gfx\\TriangleRenderer.cpp",
               "RelativeToolTip": "src\\gfx\\TriangleRenderer.cpp",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAmwI8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAmwI8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-08-20T10:55:51.443Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "TriangleRenderer.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\gfx\\TriangleRenderer.hpp",
               "RelativeDocumentMoniker": "include\\gfx\\TriangleRenderer.hpp",
@@ -172,20 +257,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "Shader.cpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\src\\gfx\\Shader.cpp",
               "RelativeDocumentMoniker": "src\\gfx\\Shader.cpp",
               "ToolTip": "C:\\Dev\\glfw-no-api\\src\\gfx\\Shader.cpp",
               "RelativeToolTip": "src\\gfx\\Shader.cpp",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFsAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-08-20T10:54:08.196Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "Shader.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\gfx\\Shader.hpp",
               "RelativeDocumentMoniker": "include\\gfx\\Shader.hpp",
@@ -198,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "triangle.frag",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\shaders\\triangle.frag",
               "RelativeDocumentMoniker": "shaders\\triangle.frag",
@@ -211,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "triangle.vert",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\shaders\\triangle.vert",
               "RelativeDocumentMoniker": "shaders\\triangle.vert",
@@ -224,33 +309,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "App.cpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\src\\app\\App.cpp",
               "RelativeDocumentMoniker": "src\\app\\App.cpp",
               "ToolTip": "C:\\Dev\\glfw-no-api\\src\\app\\App.cpp",
               "RelativeToolTip": "src\\app\\App.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAkwKsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-08-20T10:50:47.221Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "App.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\app\\App.hpp",
               "RelativeDocumentMoniker": "include\\app\\App.hpp",
               "ToolTip": "C:\\Dev\\glfw-no-api\\include\\app\\App.hpp",
               "RelativeToolTip": "include\\app\\App.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-08-20T10:49:53.974Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "Doc.txt",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\Doc.txt",
               "RelativeDocumentMoniker": "Doc.txt",
@@ -263,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "vcpkg.json",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\vcpkg.json",
               "RelativeDocumentMoniker": "vcpkg.json",
@@ -276,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\src\\main.cpp",
               "RelativeDocumentMoniker": "src\\main.cpp",
@@ -289,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "CMake Overview Pages",
               "DocumentMoniker": "CMake Overview Pages",
               "ToolTip": "CMake Overview Pages",

@@ -296,6 +296,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Dev\glfw-no-api\src\app\App.cpp" />
     <ClCompile Include="C:\Dev\glfw-no-api\src\gfx\Shader.cpp" />
     <ClCompile Include="C:\Dev\glfw-no-api\src\gfx\TriangleRenderer.cpp" />
+    <ClCompile Include="C:\Dev\glfw-no-api\src\gfx\SpriteBatch.cpp" />
     <ClCompile Include="C:\Dev\glfw-no-api\src\thirdparty\stb_image.cpp" />
   </ItemGroup>
   <ItemGroup />

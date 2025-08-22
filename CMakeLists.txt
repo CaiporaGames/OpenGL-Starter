@@ -13,6 +13,7 @@ add_library(app_core STATIC
   src/app/App.cpp
   src/gfx/Shader.cpp
   src/gfx/TriangleRenderer.cpp
+  src/gfx/SpriteBatch.cpp   
   src/thirdparty/stb_image.cpp  
 )
 
