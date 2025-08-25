@@ -17,6 +17,7 @@ bool SpriteBatch::init(const char* vsPath, const char* fsPath,
     if (!m_prog.loadFromFiles(vsPath, fsPath)) return false;
     m_uP = m_prog.uniformLocation("u_P");
     m_uTex = m_prog.uniformLocation("uTex");
+    m_uMode = m_prog.uniformLocation("u_Mode");
 
     // 2) CPU buffers sized to capacity
     m_cpuVerts.resize(static_cast<size_t>(m_maxSprites) * 4);
@@ -179,11 +180,20 @@ void SpriteBatch::endAndDraw() {
 
 void SpriteBatch::setTexture(GLuint tex) {
     m_tex = tex;
+    m_tex = tex;
 }
 
-void SpriteBatch::beginWithVP(const glm::mat4& VP) {
+void SpriteBatch::beginWithVP(const glm::mat4& VP) 
+{
     m_spriteCount = 0;
     m_prog.use();
     if (m_uP != -1) glUniformMatrix4fv(m_uP, 1, GL_FALSE, glm::value_ptr(VP));
     if (m_uTex != -1) glUniform1i(m_uTex, 0);
+    if (m_uMode != -1) glUniform1i(m_uMode, 0); // default: normal RGBA
+}
+
+ void SpriteBatch::setSampleMode(int mode) 
+ {
+    m_prog.use();
+    if (m_uMode != -1) glUniform1i(m_uMode, mode);
 }

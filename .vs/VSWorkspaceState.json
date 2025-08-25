@@ -9,14 +9,14 @@
     "",
     "\\assets",
     "\\include",
-    "\\include\\gfx",
-    "\\include\\thirdparty",
+    "\\include\\app",
+    "\\include\\engine",
     "\\shaders",
     "\\src",
     "\\src\\app",
-    "\\src\\gfx",
-    "\\src\\thirdparty"
+    "\\src\\game",
+    "\\src\\gfx"
   ],
-  "SelectedNode": "\\src\\app\\App.cpp",
+  "SelectedNode": "\\assets\\Panda.png",
   "PreviewInSolutionExplorer": false
 }

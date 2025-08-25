@@ -32,6 +32,8 @@ public:
     // Convenience
     void setTexture(GLuint tex); // if you want to swap texture later
     void beginWithVP(const glm::mat4& VP);
+    void setSampleMode(int mode); // 0 = normal, 1 = font mask
+    GLuint texture() const { return m_tex; }
 
 private:
     struct Vertex {
@@ -50,6 +52,7 @@ private:
     ShaderProgram m_prog;
     GLint m_uP = -1;
     GLint m_uTex = -1;
+    GLint m_uMode = -1;
 
     int   m_maxSprites = 0;
     int   m_spriteCount = 0;

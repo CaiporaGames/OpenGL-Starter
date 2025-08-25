@@ -2,4 +2,6 @@ C:\Dev\glfw-no-api\src\app\App.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\De
 C:\Dev\glfw-no-api\src\gfx\Shader.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\Shader.obj
 C:\Dev\glfw-no-api\src\gfx\TriangleRenderer.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\TriangleRenderer.obj
 C:\Dev\glfw-no-api\src\gfx\SpriteBatch.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\SpriteBatch.obj
+C:\Dev\glfw-no-api\src\gfx\Texture2D.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\Texture2D.obj
 C:\Dev\glfw-no-api\src\thirdparty\stb_image.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\stb_image.obj
+C:\Dev\glfw-no-api\src\game\Game.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\Game.obj
