@@ -10,7 +10,7 @@ struct FrameInput
     bool rightUp = false, rightDown = false;
     //mouse in pixels - for menu
     double mouseX = 0.0, mouseY = 0.0;
-    bool mouseLeftDown = false, mouseLeftPressed = false, mouseLeftRelease = false;
+    bool mouseLeftDown = false, mouseLeftPressed = false, mouseLeftReleased = false;
 
 };
 

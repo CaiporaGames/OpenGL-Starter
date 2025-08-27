@@ -8,13 +8,14 @@
 
 #include "thirdparty/stb_image.h"
 
-bool SpriteBatch::init(const char* vsPath, const char* fsPath,
-    const char* texturePath, int maxSprites) {
+bool SpriteBatch::init(const char* vsPath, const char* fsPath, const char* texturePath, int maxSprites) 
+{
     m_maxSprites = maxSprites;
     m_spriteCount = 0;
 
     // 1) Program + uniforms
     if (!m_prog.loadFromFiles(vsPath, fsPath)) return false;
+
     m_uP = m_prog.uniformLocation("u_P");
     m_uTex = m_prog.uniformLocation("uTex");
     m_uMode = m_prog.uniformLocation("u_Mode");
@@ -24,7 +25,8 @@ bool SpriteBatch::init(const char* vsPath, const char* fsPath,
     m_cpuIndices.resize(static_cast<size_t>(m_maxSprites) * 6);
 
     // Precompute EBO indices once: [0..3] for each sprite
-    for (int i = 0; i < m_maxSprites; ++i) {
+    for (int i = 0; i < m_maxSprites; ++i) 
+    {
         unsigned int baseV = static_cast<unsigned int>(i) * 4u;
         unsigned int baseI = static_cast<unsigned int>(i) * 6u;
         m_cpuIndices[baseI + 0] = baseV + 0;
@@ -158,7 +160,8 @@ void SpriteBatch::push(const Sprite& s) {
     ++m_spriteCount;
 }
 
-void SpriteBatch::endAndDraw() {
+void SpriteBatch::endAndDraw() 
+{
     if (m_spriteCount == 0) return;
 
     // Upload only what we used this frame
@@ -172,16 +175,13 @@ void SpriteBatch::endAndDraw() {
     glBindVertexArray(m_vao);
     glDrawElements(GL_TRIANGLES, m_spriteCount * 6, GL_UNSIGNED_INT, (void*)0);
 
-    // cleanup bindings (optional)
+    // cleanup bindings
     glBindVertexArray(0);
     glBindTexture(GL_TEXTURE_2D, 0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
-void SpriteBatch::setTexture(GLuint tex) {
-    m_tex = tex;
-    m_tex = tex;
-}
+void SpriteBatch::setTexture(GLuint tex) { m_tex = tex; }
 
 void SpriteBatch::beginWithVP(const glm::mat4& VP) 
 {

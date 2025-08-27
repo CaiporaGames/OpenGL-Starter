@@ -10,11 +10,16 @@
 #include "engine/IScene.hpp"
 #include "scenes/PongScene.hpp"
 #include "scenes/MenuScene.hpp"
+#include "core/camera/OrbitCamera3D.hpp"
+#include "render/Mesh3D.hpp"
 
-class App {
+
+class App 
+{
 public:
     App() = default;
     ~App();
+
     bool init(int w = 800, int h = 600, const char* title = "GL App");
     void run();
 
@@ -40,4 +45,12 @@ private:
     // pan state for MMB drag
     bool   panning_ = false;
     double lastX_ = 0.0, lastY_ = 0.0;
+
+    // 3D camera
+    ShaderProgram basic3D_;
+    GLint uMVP_ = -1;
+    GLint uColor_ = -1;
+    Mesh3D cube_;
+    core::OrbitCamera3D cam3D_;
+    bool orbiting3D_ = false;
 };

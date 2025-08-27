@@ -2,16 +2,21 @@
 #include "engine/IScene.hpp"
 #include "ui/BitmapFont.hpp"
 
-class MenuScene : public IScene {
+class MenuScene : public IScene 
+{
 public:
-    bool init(int fbw, int fbh) override {
+    bool init(int fbw, int fbh) override 
+    {
         cam_.setViewport(fbw, fbh);
         cam_.setCenter({ 0.0f, 0.0f });
         cam_.setHeightWorld(20.0f);
         return true;
     }
+
     void resize(int fbw, int fbh) override { cam_.setViewport(fbw, fbh); }
-    void update(const FrameInput& in, float /*dt*/) override {
+
+    void update(const FrameInput& in, float /*dt*/) override 
+    {
         // hover & clicks in world units
         glm::vec2 m = cam_.screenToWorld(in.mouseX, in.mouseY);
         hoveredStart_ = pointInRect(m, startCenter_, startSize_);
@@ -19,7 +24,8 @@ public:
         if (hoveredStart_ && in.mouseLeftPressed) startRequested_ = true;
         if (hoveredQuit_ && in.mouseLeftPressed) quitRequested_ = true;
     }
-    void render(SpriteBatch& batch) const override {
+    void render(SpriteBatch& batch) const override 
+    {
         auto pushRectCentered = [&](glm::vec2 c, glm::vec2 sz, glm::vec4 col) 
         {
             Sprite s{}; 
@@ -44,13 +50,14 @@ public:
         // Note: no text yet; add bitmap font later if you want labels
     }
 
-    OrthoCamera2D& camera()       override { return cam_; }
+    OrthoCamera2D& camera() override { return cam_; }
     const OrthoCamera2D& camera() const override { return cam_; }
 
     // App queries these to route transitions
     bool wantsStart() const { return startRequested_; }
     bool wantsQuit()  const { return quitRequested_; }
     void consumeRequests() { startRequested_ = quitRequested_ = false; }
+
     void renderText(SpriteBatch& batch, const BitmapFont& font) const
     {
         //choose glyph size in world units
@@ -87,4 +94,5 @@ private:
 
     bool hoveredStart_ = false, hoveredQuit_ = false;
     bool startRequested_ = false, quitRequested_ = false;
+
 };

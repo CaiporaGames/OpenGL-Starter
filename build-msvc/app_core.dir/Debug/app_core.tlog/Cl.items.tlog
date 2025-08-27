@@ -4,4 +4,6 @@ C:\Dev\glfw-no-api\src\gfx\TriangleRenderer.cpp;C:\Dev\glfw-no-api\build-msvc\ap
 C:\Dev\glfw-no-api\src\gfx\SpriteBatch.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\SpriteBatch.obj
 C:\Dev\glfw-no-api\src\gfx\Texture2D.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\Texture2D.obj
 C:\Dev\glfw-no-api\src\thirdparty\stb_image.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\stb_image.obj
-C:\Dev\glfw-no-api\src\game\Game.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\Game.obj
+C:\Dev\glfw-no-api\src\game\PongScene.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\PongScene.obj
+C:\Dev\glfw-no-api\src\gfx\GLDebug.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\GLDebug.obj
+C:\Dev\glfw-no-api\src\render\Mesh3D.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\Mesh3D.obj

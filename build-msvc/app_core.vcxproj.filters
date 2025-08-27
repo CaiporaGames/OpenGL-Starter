@@ -19,14 +19,35 @@
     <ClCompile Include="C:\Dev\glfw-no-api\src\thirdparty\stb_image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Dev\glfw-no-api\src\game\Game.cpp">
+    <ClCompile Include="C:\Dev\glfw-no-api\src\game\PongScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\gfx\GLDebug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\render\Mesh3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\gfx\GLDebug.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\render\Mesh3D.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Dev\glfw-no-api\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="C:\Dev\glfw-no-api\shaders\basic3d.vert" />
+    <None Include="C:\Dev\glfw-no-api\shaders\basic3d.frag" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{1C3B1BE1-6345-3E72-ADE0-AC05B1A923B6}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{0DB92347-489B-3A96-8724-C21806AD18D6}</UniqueIdentifier>
     </Filter>

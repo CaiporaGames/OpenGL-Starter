@@ -7,16 +7,16 @@
   },
   "ExpandedNodes": [
     "",
-    "\\assets",
+    "\\core",
     "\\include",
-    "\\include\\app",
-    "\\include\\engine",
-    "\\shaders",
-    "\\src",
-    "\\src\\app",
-    "\\src\\game",
-    "\\src\\gfx"
+    "\\include\\render",
+    "\\include\\scenes",
+    "\\include\\thirdparty\\glad",
+    "\\include\\thirdparty\\glad\\include",
+    "\\include\\thirdparty\\glad\\include\\glad",
+    "\\include\\thirdparty\\glad\\include\\KHR",
+    "\\src"
   ],
-  "SelectedNode": "\\assets\\Panda.png",
+  "SelectedNode": "\\core",
   "PreviewInSolutionExplorer": false
 }
