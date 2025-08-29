@@ -7,6 +7,18 @@
     <ClInclude Include="C:\Dev\glfw-no-api\core\include\core\camera\OrbitCamera3D.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\core\include\core\ray.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\core\include\core\raycast.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\core\include\core\camera\ScreenRay.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\core\include\core\frustum.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Dev\glfw-no-api\CMakeLists.txt" />

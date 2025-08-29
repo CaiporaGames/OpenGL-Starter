@@ -287,6 +287,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClInclude Include="C:\Dev\glfw-no-api\core\include\core\aabb.hpp" />
     <ClInclude Include="C:\Dev\glfw-no-api\core\include\core\camera\OrbitCamera3D.hpp" />
+    <ClInclude Include="C:\Dev\glfw-no-api\core\include\core\ray.hpp" />
+    <ClInclude Include="C:\Dev\glfw-no-api\core\include\core\raycast.hpp" />
+    <ClInclude Include="C:\Dev\glfw-no-api\core\include\core\camera\ScreenRay.hpp" />
+    <ClInclude Include="C:\Dev\glfw-no-api\core\include\core\frustum.hpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

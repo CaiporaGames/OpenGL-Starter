@@ -4,13 +4,13 @@ bool Mesh3D::initColoredCube() {
     destroy();
 
     // 8 vertices (positions)
-    const float v[] = {
+    static const float v[] = {
         -0.5f,-0.5f,-0.5f,  +0.5f,-0.5f,-0.5f,
         +0.5f,+0.5f,-0.5f,  -0.5f,+0.5f,-0.5f,
         -0.5f,-0.5f,+0.5f,  +0.5f,-0.5f,+0.5f,
         +0.5f,+0.5f,+0.5f,  -0.5f,+0.5f,+0.5f,
     };
-    const unsigned idx[] = {
+    static const unsigned idx[] = {
         0,1,2,  2,3,0,
         5,4,7,  7,6,5,
         4,0,3,  3,7,4,
@@ -18,6 +18,9 @@ bool Mesh3D::initColoredCube() {
         4,5,1,  1,0,4,
         3,2,6,  6,7,3,
     };
+
+    cpuVerts_.assign(std::begin(v), std::end(v));
+    cpuIdx_.assign(std::begin(idx), std::end(idx));
     indexCount_ = (GLsizei)(sizeof(idx) / sizeof(idx[0]));
 
     glGenVertexArrays(1, &vao_);

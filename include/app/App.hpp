@@ -12,7 +12,13 @@
 #include "scenes/MenuScene.hpp"
 #include "core/camera/OrbitCamera3D.hpp"
 #include "render/Mesh3D.hpp"
-
+#include "render/DebugLines3D.hpp"
+#include "render/DebugCross3D.hpp"
+#include "core/raycast.hpp"
+#include "core/camera/ScreenRay.hpp"
+#include "render/BoxWire3D.hpp"
+#include "core/aabb.hpp"
+#include "core/frustum.hpp"
 
 class App 
 {
@@ -53,4 +59,23 @@ private:
     Mesh3D cube_;
     core::OrbitCamera3D cam3D_;
     bool orbiting3D_ = false;
+
+    //model cube
+    glm::mat4 cubeModel_{ 1.0f };
+    DebugLines3D triLines_;
+    DebugCross3D hitCross_;
+    BoxWire3D box_;
+    core::AABB cubeAABBModel_{};
+    core::AABB cubeAABBWorld_{};
+    bool pickHasHit_ = false;
+
+    //stats 
+    float fps_ = 0.0f;
+    double fpsAccum_ = 0.0f;
+    int fpsFrames_ = 0;
+
+    //frustum
+    bool cubeVisible_ = true;
+    int objTotal_ = 1;
+    int objVisible_ = 1;
 };

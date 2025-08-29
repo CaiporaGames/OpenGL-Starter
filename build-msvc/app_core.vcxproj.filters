@@ -28,12 +28,30 @@
     <ClCompile Include="C:\Dev\glfw-no-api\src\render\Mesh3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\render\DebugLines3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\render\DebugCross3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\render\BoxWire3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Dev\glfw-no-api\include\gfx\GLDebug.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Dev\glfw-no-api\include\render\Mesh3D.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\render\DebugLines3D.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\render\DebugCross3D.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\render\BoxWire3D.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

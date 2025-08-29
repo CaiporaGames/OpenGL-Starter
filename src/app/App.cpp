@@ -5,6 +5,7 @@
 #include <chrono>
 #include <algorithm> 
 #include "gfx/GLDebug.hpp"
+#include "core/aabb.hpp"
 
 // If you kept stbi_set_flip_vertically_on_load(true), row 0 = bottom row.
 // cols, rows = grid size. frame = 0..(cols*rows-1)
@@ -75,7 +76,80 @@ void App::onMouseButton(GLFWwindow* win, int button, int action, int)
     }
     if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) 
     {
-        double sx, sy; glfwGetCursorPos(win, &sx, &sy);
+        auto* app = static_cast<App*>(glfwGetWindowUserPointer(win));
+        if (!app) return;
+
+        const bool ctrl =
+            (glfwGetKey(win, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS) ||
+            (glfwGetKey(win, GLFW_KEY_RIGHT_CONTROL) == GLFW_PRESS);
+
+        double sx;
+        double sy;
+        glfwGetCursorPos(win, &sx, &sy);
+
+        if (ctrl)
+        {
+            //3D pick
+            const glm::mat4 invVP = glm::inverse(app->cam3D_.vp());
+            core::Ray rayW = core::screenRayFromInvVP(invVP, sx, sy, app->fbw_, app->fbh_);
+            
+            //Transform ray to model space
+            const glm::mat4 invM = glm::inverse(app->cubeModel_);
+            core::Ray rM;
+            rM.origin = glm::vec3(invM * glm::vec4(rayW.origin, 1.0));
+            rM.dir = glm::normalize(glm::vec3(invM * glm::vec4(rayW.dir, 0.0)));
+
+            //Raycast
+            core::RayHit hit;
+            const float* pos = app->cube_.cpuPositions();
+            const unsigned* idx = app->cube_.cpuIndices();
+            const std::size_t tris = app->cube_.triCount();
+
+            if (pos && idx && core::raycastMesh(rM, pos, idx, tris, hit))
+            {
+                const unsigned i0 = idx[3 * hit.triIndex + 0];
+                const unsigned i1 = idx[3 * hit.triIndex + 1];
+                const unsigned i2 = idx[3 * hit.triIndex + 2];
+
+                auto P = [&](unsigned vi)
+                {
+                    return glm::vec3(pos[3 * vi + 0], pos[3 * vi + 1], pos[3 * vi + 2]);
+                };
+
+                //Triangle vertices in MODEL space
+                const glm::vec3 v0 = P(i0);
+                const glm::vec3 v1 = P(i1);
+                const glm::vec3 v2 = P(i2);
+
+                //Barycentric hit point in MODEL space
+                const float w = 1.0f - hit.u - hit.v;
+                const glm::vec3 pM = w * v0 + hit.u * v1 + hit.v * v2;
+
+                //Back to world for display
+                const glm::vec3 aW = glm::vec3(app->cubeModel_ * glm::vec4(P(i0), 1.0));
+                const glm::vec3 bW = glm::vec3(app->cubeModel_ * glm::vec4(P(i1), 1.0));
+                const glm::vec3 cW = glm::vec3(app->cubeModel_ * glm::vec4(P(i2), 1.0));
+                const glm::vec3 pW = glm::vec3(app->cubeModel_ * glm::vec4(pM, 1.0));
+                
+                //outline and cross marker
+                app->triLines_.setTriangle(aW, bW, cW);
+                app->hitCross_.setCross(pW, /*halfLenWorld*/0.15f);
+
+                app->pickHasHit_ = true;
+
+                std::printf("Hit tri %d t=%.3f (u=%.3f, v=%.3f)\n", hit.triIndex, hit.t, hit.u, hit.v);
+            }
+            else
+            {
+                app->triLines_.clear();
+                app->hitCross_.clear();
+                app->pickHasHit_ = false;
+                std::printf("No hit\n");
+            }
+            return; //do not do 2D pick when CTRL is down
+        }
+        
+        //2D pick
         auto world = app->scene_->camera().screenToWorld(sx, sy);
         std::printf("Pick world: (%.3f, %.3f)\n", world.x, world.y);
     }
@@ -184,6 +258,25 @@ bool App::init(int w, int h, const char* title)
 
     if (!cube_.initColoredCube()) return false;
 
+    //model kept in one place
+    cubeModel_ = glm::scale(glm::mat4(1.0f), glm::vec3(3.0f));
+
+    if (!triLines_.init()) return false;
+    if (!box_.init()) return false;
+    if (!hitCross_.init()) return false;
+
+    //compute model-space AABB from CPU positions = 8 vertices
+    {
+        const float* pos = cube_.cpuPositions();
+
+        if (pos)
+        {
+            cubeAABBModel_ = core::computeAABB(pos, 8);
+            cubeAABBWorld_ = core::transformAABB(cubeAABBModel_, cubeModel_);
+            box_.set(cubeAABBWorld_.min, cubeAABBWorld_.max);
+        }
+    }
+
     // Initial framebuffer size
     glfwGetFramebufferSize(window_, &fbw_, &fbh_);
     glViewport(0, 0, fbw_, fbh_);
@@ -259,6 +352,17 @@ void App::run()
             acc_ = 0.0;
         }
 
+        //FPS = simple EMA every ~0.25s
+        fpsAccum_ += frameDt;
+        ++fpsFrames_;
+
+        if (fpsAccum_ >= 0.25f)
+        {
+            fps_ = float(fpsFrames_ / fpsAccum_);
+            fpsFrames_ = 0;
+            fpsAccum_ = 0.0;
+        }
+
         //Menu scene
         if (auto* scene = dynamic_cast<MenuScene*>(scene_.get()))
         {
@@ -288,17 +392,68 @@ void App::run()
         glCullFace(GL_BACK);
         glFrontFace(GL_CCW);
 
+        //Frustum culling per object
+        {
+            const core::Frustum fr = core::extractFrustum(cam3D_.vp());
+
+            //cubeAABBWorld was computed at init from cubeModel; recompute only if the model changes
+            cubeVisible_ = !core::aabbOutsideFrustum(fr, cubeAABBWorld_);
+            objTotal_ = 1;
+            objVisible_ = cubeVisible_ ? 1 : 0;
+        }
+
         //3D pass, one draw call
         {
             basic3D_.use();
-            //model: scale the unit to something noticeable
-            glm::mat4 M(1.0f);
-            M = glm::scale(M, glm::vec3(3.0f));
-            const glm::mat4 MVP = cam3D_.vp() * M;
-            if (uMVP_ != -1) glUniformMatrix4fv(uMVP_, 1, GL_FALSE, &MVP[0][0]);
-            if (uColor_ != -1) glUniform3f(uColor_, 0.25f, 0.6f, 0.85f);
+            if (cubeVisible_)
+            {
+                const glm::mat4 MVP = cam3D_.vp() * cubeModel_;
+        
+                if (uMVP_ != -1) glUniformMatrix4fv(uMVP_, 1, GL_FALSE, &MVP[0][0]);
+                if (uColor_ != -1) glUniform3f(uColor_, 0.25f, 0.6f, 0.85f);
 
-            cube_.draw();
+                cube_.draw();
+
+                //hit tri if any
+                if (pickHasHit_)
+                {
+                    //reuse shader; lines are already in world space
+                    const glm::mat4 MVPw = cam3D_.vp();//lines in world space
+                    if (uMVP_ != -1)
+                    {
+                        glUniformMatrix4fv(uMVP_, 1, GL_FALSE, &MVPw[0][0]);
+                    }
+
+                    if (uColor_ != -1)
+                    {
+                        glUniform3f(uColor_, 1.0f, 0.95f, 0.2f);
+                    }
+
+                    triLines_.draw();//extra draw only when hit exists
+
+                    if (uColor_ != -1)
+                    {
+                        glUniform3f(uColor_, 1.0f, 0.25f, 1.0f);
+                    }
+
+                    hitCross_.draw();//+ 1 draw
+                }
+
+                //AABB box in world space
+                {
+                    const glm::mat4 MVPw = cam3D_.vp();
+                    if (uMVP_ != -1)
+                    {
+                        glUniformMatrix4fv(uMVP_, 1, GL_FALSE, &MVPw[0][0]);
+                    }
+                    if (uColor_ != -1)
+                    {
+                        glUniform3f(uColor_, 0.9f, 0.9f, 0.9f);
+                    }
+                    box_.draw(); //+ 1 draw
+                }
+            }
+           
         }
 
         //2D passes
@@ -328,6 +483,36 @@ void App::run()
                 pong->renderText(spriteBatch_, uiFont_);
             }
             spriteBatch_.endAndDraw();
+
+            //OVERLAY in pixels
+            {
+                spriteBatch_.begin(fbw_, fbh_);//pixel ortho
+                spriteBatch_.setTexture(uiFont_.text);
+                spriteBatch_.setSampleMode(2); //png alpha
+
+                //compose text
+                char buf[256];
+                const int verts = 8;
+                const int tris = 12;
+
+                std::snprintf(buf, sizeof(buf),
+                    "FPS: %.1f\nVerts: %d  Tris: %d\nVisible: %d / %d\nAABB min: [%.2f %.2f %.2f]\nAABB max: [%.2f %.2f %.2f]",
+                    fps_, verts, tris,
+                    objVisible_, objTotal_,
+                    cubeAABBWorld_.min.x, cubeAABBWorld_.min.y, cubeAABBWorld_.min.z,
+                    cubeAABBWorld_.max.x, cubeAABBWorld_.max.y, cubeAABBWorld_.max.z);
+
+
+                glm::vec2 glyph = { 8.0f, 12.0f };//pixel size per glyph on screen
+                glm::vec4 col = { 0.95f, 0.95f, 0.95f, 1.0f };
+                float pad = 8.0f;
+
+                //bottom-left achor for first line = top-left screen with pixel ortho
+                glm::vec2 bl = { pad, float(fbh_) - pad - glyph.y };
+                uiFont_.drawTextBL(spriteBatch_, buf, bl, glyph, col, /*letter*/1.0f, /*line*/2.0f);
+
+                spriteBatch_.endAndDraw(); //+ 1 draw
+            }
         }
 
         glfwSwapBuffers(window_);

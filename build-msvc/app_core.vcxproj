@@ -308,6 +308,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </None>
     <None Include="C:\Dev\glfw-no-api\shaders\basic3d.frag">
     </None>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\render\DebugLines3D.hpp" />
+    <ClCompile Include="C:\Dev\glfw-no-api\src\render\DebugLines3D.cpp" />
+    <ClInclude Include="C:\Dev\glfw-no-api\include\render\DebugCross3D.hpp" />
+    <ClCompile Include="C:\Dev\glfw-no-api\src\render\DebugCross3D.cpp" />
+    <ClInclude Include="C:\Dev\glfw-no-api\include\render\BoxWire3D.hpp" />
+    <ClCompile Include="C:\Dev\glfw-no-api\src\render\BoxWire3D.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

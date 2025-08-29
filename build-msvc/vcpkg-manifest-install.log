@@ -9,27 +9,27 @@ The following packages will be built and installed:
   * vcpkg-cmake:x64-windows@2024-04-23
   * vcpkg-cmake-config:x64-windows@2024-05-23
 Additional packages (*) will be modified to complete this operation.
-Restored 7 package(s) from C:\Users\timot\AppData\Local\vcpkg\archives in 598 ms. Use --debug to see more details.
+Restored 7 package(s) from C:\Users\timot\AppData\Local\vcpkg\archives in 1.2 s. Use --debug to see more details.
 Installing 1/7 vcpkg-cmake-config:x64-windows@2024-05-23...
-Elapsed time to handle vcpkg-cmake-config:x64-windows: 8.57 ms
+Elapsed time to handle vcpkg-cmake-config:x64-windows: 11.3 ms
 vcpkg-cmake-config:x64-windows package ABI: 683f7ac131f9fec0597f411ce6c105ee93dd4b2b53c80b297cce6bba17b1df76
 Installing 2/7 vcpkg-cmake:x64-windows@2024-04-23...
-Elapsed time to handle vcpkg-cmake:x64-windows: 7.84 ms
+Elapsed time to handle vcpkg-cmake:x64-windows: 15.5 ms
 vcpkg-cmake:x64-windows package ABI: cc022b910607f5cc7227c2cd2f45a08df7d4c67304db47e98f59b06fdff19c29
 Installing 3/7 egl-registry:x64-windows@2024-01-25...
-Elapsed time to handle egl-registry:x64-windows: 9.96 ms
+Elapsed time to handle egl-registry:x64-windows: 18.4 ms
 egl-registry:x64-windows package ABI: 6f1461efb8043266b3a357d211ea4cecefbf4d5e4c8633bfe495b669160ef4f3
 Installing 4/7 opengl-registry:x64-windows@2024-02-10#1...
-Elapsed time to handle opengl-registry:x64-windows: 25 ms
+Elapsed time to handle opengl-registry:x64-windows: 41.1 ms
 opengl-registry:x64-windows package ABI: 0ad5269101480a0bf7377c6a908d218cd9059c3fca21f1239e65d16432249d6a
 Installing 5/7 glad[core,loader]:x64-windows@0.1.36...
-Elapsed time to handle glad:x64-windows: 19.1 ms
+Elapsed time to handle glad:x64-windows: 33.3 ms
 glad:x64-windows package ABI: 8765a10a39d916e7723a6162725275ada4e0ca58fe17421b8165e333e47585b6
 Installing 6/7 glfw3:x64-windows@3.4#1...
-Elapsed time to handle glfw3:x64-windows: 25.9 ms
+Elapsed time to handle glfw3:x64-windows: 38.3 ms
 glfw3:x64-windows package ABI: 1c60051198520da2678348e21c42dd29148822f0edd544faf573092b0689e24d
 Installing 7/7 glm:x64-windows@1.0.1#3...
-Elapsed time to handle glm:x64-windows: 292 ms
+Elapsed time to handle glm:x64-windows: 222 ms
 glm:x64-windows package ABI: 0d712b6bd0e6aa35c7a5606b1bd2746f72a1d26c8456783274ac079b581a1941
 Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
 Some packages did not declare an SPDX license. Check the `copyright` file for each package for more information about their licensing.
@@ -62,4 +62,4 @@ The package glm provides CMake targets:
     find_package(glm CONFIG REQUIRED)
     target_link_libraries(main PRIVATE glm::glm-header-only)
 
-All requested installations completed successfully in: 396 ms
+All requested installations completed successfully in: 401 ms

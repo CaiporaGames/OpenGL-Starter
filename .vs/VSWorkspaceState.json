@@ -8,15 +8,15 @@
   "ExpandedNodes": [
     "",
     "\\core",
+    "\\core\\include",
+    "\\core\\include\\core",
+    "\\core\\include\\core\\camera",
     "\\include",
-    "\\include\\render",
-    "\\include\\scenes",
-    "\\include\\thirdparty\\glad",
-    "\\include\\thirdparty\\glad\\include",
-    "\\include\\thirdparty\\glad\\include\\glad",
-    "\\include\\thirdparty\\glad\\include\\KHR",
-    "\\src"
+    "\\include\\app",
+    "\\include\\engine",
+    "\\src",
+    "\\src\\app"
   ],
-  "SelectedNode": "\\core",
+  "SelectedNode": "\\build-msvc",
   "PreviewInSolutionExplorer": false
 }

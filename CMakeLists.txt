@@ -51,7 +51,21 @@ target_sources(core PUBLIC
   FILE_SET HEADERS
   BASE_DIRS core/include
   FILES
+    core/include/core/aabb.hpp
     core/include/core/camera/OrbitCamera3D.hpp
+    core/include/core/ray.hpp
+    core/include/core/raycast.hpp
+    core/include/core/camera/ScreenRay.hpp
+    core/include/core/frustum.hpp
+)
+
+target_sources(app_core PRIVATE
+  include/render/DebugLines3D.hpp
+  src/render/DebugLines3D.cpp
+  include/render/DebugCross3D.hpp
+  src/render/DebugCross3D.cpp
+  include/render/BoxWire3D.hpp
+  src/render/BoxWire3D.cpp
 )
 
 target_include_directories(core PUBLIC core/include)

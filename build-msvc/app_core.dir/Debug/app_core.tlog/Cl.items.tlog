@@ -7,3 +7,6 @@ C:\Dev\glfw-no-api\src\thirdparty\stb_image.cpp;C:\Dev\glfw-no-api\build-msvc\ap
 C:\Dev\glfw-no-api\src\game\PongScene.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\PongScene.obj
 C:\Dev\glfw-no-api\src\gfx\GLDebug.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\GLDebug.obj
 C:\Dev\glfw-no-api\src\render\Mesh3D.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\Mesh3D.obj
+C:\Dev\glfw-no-api\src\render\DebugLines3D.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\DebugLines3D.obj
+C:\Dev\glfw-no-api\src\render\DebugCross3D.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\DebugCross3D.obj
+C:\Dev\glfw-no-api\src\render\BoxWire3D.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\BoxWire3D.obj
