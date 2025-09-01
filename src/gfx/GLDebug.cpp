@@ -1,9 +1,16 @@
 #include "gfx/GLDebug.hpp"
 #include <glad/glad.h>
+#include <vector>
+#include <mutex>
 #include <cstdio>
+#include <utility>
 
 namespace {
-    // Basic readable mapping; extend if you like.
+    std::vector<GLDebug::Message> g_buf;
+    std::mutex g_mx;
+    bool g_enabled = false;
+    bool g_verbose = true;
+
     const char* srcName(GLenum s) {
         switch (s) {
         case GL_DEBUG_SOURCE_API:             return "API";
@@ -23,45 +30,83 @@ namespace {
         case GL_DEBUG_TYPE_PORTABILITY:         return "Portability";
         case GL_DEBUG_TYPE_PERFORMANCE:         return "Perf";
         case GL_DEBUG_TYPE_MARKER:              return "Marker";
-        case GL_DEBUG_TYPE_PUSH_GROUP:          return "PushGrp";
-        case GL_DEBUG_TYPE_POP_GROUP:           return "PopGrp";
+        case GL_DEBUG_TYPE_PUSH_GROUP:          return "Push";
+        case GL_DEBUG_TYPE_POP_GROUP:           return "Pop";
         default: return "?";
         }
     }
     const char* sevName(GLenum s) {
         switch (s) {
-        case GL_DEBUG_SEVERITY_HIGH:         return "HIGH";
-        case GL_DEBUG_SEVERITY_MEDIUM:       return "MED";
-        case GL_DEBUG_SEVERITY_LOW:          return "LOW";
-        case GL_DEBUG_SEVERITY_NOTIFICATION: return "NOTE";
+        case GL_DEBUG_SEVERITY_HIGH:         return "High";
+        case GL_DEBUG_SEVERITY_MEDIUM:       return "Medium";
+        case GL_DEBUG_SEVERITY_LOW:          return "Low";
+        case GL_DEBUG_SEVERITY_NOTIFICATION: return "Note";
         default: return "?";
         }
     }
 
-    void APIENTRY cb(GLenum source, GLenum type, GLuint id, GLenum severity,
-        GLsizei, const GLchar* message, const void*) {
-        // Filter noisy ids here if desired.
-        if (severity == GL_DEBUG_SEVERITY_NOTIFICATION) return; // keep quiet by default
-        std::fprintf(stderr, "[GL %s|%s|%s id=%u] %s\n",
-            srcName(source), typeName(type), sevName(severity), id, message);
-    }
-}
-
-void GLDebug::enable() {
-#if !defined(NDEBUG)
-    // Available either via GL 4.3+ core or KHR_debug on 3.3 contexts.
-    if (GLAD_GL_KHR_debug || GLAD_GL_ARB_debug_output) 
+    void APIENTRY cb(GLenum source, GLenum type, GLuint id,
+        GLenum severity, GLsizei, const GLchar* message, const void*)
     {
-        glEnable(GL_DEBUG_OUTPUT);
-        glEnable(GL_DEBUG_OUTPUT_SYNCHRONOUS);
-        glDebugMessageCallback(cb, nullptr);
-        // Optional: silence notifications globally (kept also in callback early-return)
-        glDebugMessageControl(GL_DONT_CARE, GL_DONT_CARE,
-            GL_DEBUG_SEVERITY_NOTIFICATION, 0, nullptr, GL_FALSE);
-        std::fprintf(stderr, "[GLDebug] Debug output enabled.\n");
+        if (!g_verbose && severity == GL_DEBUG_SEVERITY_NOTIFICATION) return;
+
+        GLDebug::Message m;
+        m.source = source;
+        m.type = type;
+        m.id = id;
+        m.severity = severity;
+        m.text = message ? message : "";
+
+        {
+            std::lock_guard<std::mutex> lk(g_mx);
+            g_buf.emplace_back(std::move(m));
+        }
+
+        // Also print to stdout for convenience
+        std::printf("[GL %s/%s/%s #%u] %s\n",
+            srcName(source), typeName(type), sevName(severity), id,
+            message ? message : "");
     }
-    else {
-        std::fprintf(stderr, "[GLDebug] KHR_debug not available (ok).\n");
+} // anon
+
+namespace GLDebug {
+
+    void enable(bool verbose)
+    {
+        g_verbose = verbose;
+
+        // Works on GL 4.3+ or when KHR_debug is present. Check function pointer.
+        if (glad_glDebugMessageCallback) {
+            glEnable(GL_DEBUG_OUTPUT);
+            glEnable(GL_DEBUG_OUTPUT_SYNCHRONOUS);
+            glDebugMessageCallback(cb, nullptr);
+            g_enabled = true;
+        }
+        else {
+            g_enabled = false;
+            std::puts("[GLDebug] KHR_debug not available; messages disabled.");
+        }
     }
-#endif
-}
+
+    void disable()
+    {
+        if (g_enabled && glad_glDebugMessageCallback) {
+            glDebugMessageCallback(nullptr, nullptr);
+            glDisable(GL_DEBUG_OUTPUT);
+            glDisable(GL_DEBUG_OUTPUT_SYNCHRONOUS);
+        }
+        g_enabled = false;
+    }
+
+    void clear()
+    {
+        std::lock_guard<std::mutex> lk(g_mx);
+        g_buf.clear();
+    }
+
+    const std::vector<Message>& messages()
+    {
+        return g_buf;
+    }
+
+} // namespace GLDebug

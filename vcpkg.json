@@ -2,8 +2,16 @@
   "name": "glfw-no-api",
   "version-string": "0.1.0",
   "dependencies": [
-    "glfw3",
-    "glad",
-    "glm"
+    { "name": "glad" },
+    { "name": "glfw3" },
+    { "name": "glm" },
+    { "name": "tinyobjloader" },
+    {
+      "name": "imgui",
+      "default-features": false,
+      "features": [ "glfw-binding", "opengl3-binding" ]
+    }
   ]
 }
+
+

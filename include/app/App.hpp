@@ -19,6 +19,13 @@
 #include "render/BoxWire3D.hpp"
 #include "core/aabb.hpp"
 #include "core/frustum.hpp"
+#include "core/bvh.hpp"
+#include "core/mesh_data.hpp"
+#include "core/io/obj_loader.hpp"
+#include "render/MeshGL.hpp"
+#include "ui/ImGuiLayer.hpp"
+#include "gfx/GLDebug.hpp"
+#include "util/Screenshot.hpp"
 
 class App 
 {
@@ -78,4 +85,32 @@ private:
     bool cubeVisible_ = true;
     int objTotal_ = 1;
     int objVisible_ = 1;
+
+    //BVH
+    core::BVH bvh_;
+    int bvhNodes_ = 0;
+    bool useBVH_ = true; //toggle if you want to compare quickly
+
+    //active mesh: either cube_ or loadedMesh_
+    bool hasLoadedMesh_ = false;
+    core::MeshData loadedCPU_;
+    MeshGL loadedGL_;
+    glm::mat4 loadedModel_{ 1.0f };
+    core::BVH loadedBVH_;
+    core::AABB loadedAABBModel_{};
+    core::AABB loadedAABBWorld_{};
+
+    bool loadOBJIntoActive(const std::string& path, float uniformScale = 1.0f);
+
+    ImGuiLayer imgui_;
+    bool showImGui_ = true;
+    bool showAABB_ = true;
+    bool showHitViz_ = true;
+    bool wireframe_ = false;
+    bool vsyncOn_ = true;
+    bool wantScreenshot_ = false;
+
+    //Tiny rolling FPS graph - last 120 frames
+    float fpsHistory_[120] = { 0.0f };
+    int fpsHead_ = 0;
 };

@@ -37,6 +37,15 @@
     <ClCompile Include="C:\Dev\glfw-no-api\src\render\BoxWire3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\render\MeshGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\ui\ImGuiLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\util\Screenshot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Dev\glfw-no-api\include\gfx\GLDebug.hpp">
@@ -52,6 +61,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Dev\glfw-no-api\include\render\BoxWire3D.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\render\MeshGL.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\ui\ImGuiLayer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\util\Screenshot.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -188,6 +188,9 @@ CMAKE_TOOLCHAIN_FILE:FILEPATH=C:/vcpkg/scripts/buildsystems/vcpkg.cmake
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Build unit tests
+ENABLE_TESTS:BOOL=OFF
+
 //Automatically copy dependencies into the output directory for
 // executables.
 VCPKG_APPLOCAL_DEPS:BOOL=ON
@@ -270,6 +273,12 @@ glfw_no_api_SOURCE_DIR:STATIC=C:/Dev/glfw-no-api
 
 //The directory containing a CMake configuration file for glm.
 glm_DIR:PATH=C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/glm
+
+//The directory containing a CMake configuration file for imgui.
+imgui_DIR:PATH=C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/imgui
+
+//The directory containing a CMake configuration file for tinyobjloader.
+tinyobjloader_DIR:PATH=C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/tinyobjloader
 
 
 ########################

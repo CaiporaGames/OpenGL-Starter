@@ -3,6 +3,7 @@
 #include <glm/vec2.hpp>
 #include <glm/vec4.hpp>
 #include "gfx/SpriteBatch.hpp"
+#include <algorithm> 
 
 struct BitmapFont
 {

@@ -9,14 +9,14 @@
     "",
     "\\core",
     "\\core\\include",
-    "\\core\\include\\core",
-    "\\core\\include\\core\\camera",
+    "\\core\\include\\util",
     "\\include",
     "\\include\\app",
-    "\\include\\engine",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\ui",
+    "\\src\\util"
   ],
-  "SelectedNode": "\\build-msvc",
+  "SelectedNode": "\\CMakeLists.txt",
   "PreviewInSolutionExplorer": false
 }

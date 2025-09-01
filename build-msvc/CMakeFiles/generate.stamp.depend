@@ -13,6 +13,15 @@ C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/glm/glmConfig-de
 C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/glm/glmConfig-release.cmake
 C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/glm/glmConfig.cmake
 C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/glm/glmConfigVersion.cmake
+C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/imgui/imgui-config.cmake
+C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/imgui/imgui-targets-debug.cmake
+C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/imgui/imgui-targets-release.cmake
+C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/imgui/imgui-targets.cmake
+C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/tinyobjloader/tinyobjloader-config-version.cmake
+C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/tinyobjloader/tinyobjloader-config.cmake
+C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/tinyobjloader/tinyobjloader-targets-debug.cmake
+C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/tinyobjloader/tinyobjloader-targets-release.cmake
+C:/Dev/glfw-no-api/build-msvc/vcpkg_installed/x64-windows/share/tinyobjloader/tinyobjloader-targets.cmake
 C:/Dev/glfw-no-api/vcpkg.json
 C:/mingw64/share/cmake-4.0/Modules/CMakeCCompiler.cmake.in
 C:/mingw64/share/cmake-4.0/Modules/CMakeCCompilerABI.c
