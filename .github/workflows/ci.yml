@@ -1,0 +1,84 @@
+name: ci
+on:
+  push: { branches: [ main ] }
+  pull_request: { branches: [ main] }
+
+jobs:
+  build:
+    name: ${{ matrix.os }} build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ windows-latest, ubuntu-latest, macos-latest ]
+    env:
+      VCPKG_ROOT: ${{ runner.temp }}/vcpkg
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache vcpkg
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ env.VCPKG_ROOT }}/installed
+            ${{ env.VCPKG_ROOT }}/downloads
+          key: vcpkg-${{ runner.os }}-${{ hashFiles('vcpkg.json') }}
+          restore-keys: vcpkg-${{ runner.os }}-
+
+      - name: Fetch vcpkg
+        shell: bash
+        run: |
+          if [ ! -d "${VCPKG_ROOT}" ]; then
+            git clone --depth 1 https://github.com/microsoft/vcpkg "${VCPKG_ROOT}"
+          fi
+
+      - name: Bootstrap vcpkg
+        shell: bash
+        run: |
+          if [ "${{ runner.os }}" = "Windows" ]; then
+            "${VCPKG_ROOT}/bootstrap-vcpkg.bat"
+          else
+            "${VCPKG_ROOT}/bootstrap-vcpkg.sh"
+          fi
+
+      - name: Configure (Windows)
+        if: matrix.os == 'windows-latest'
+        run: cmake --preset win-msvc-release
+        env: { VCPKG_ROOT: ${{ env.VCPKG_ROOT }} }
+
+      - name: Build+Install (Windows)
+        if: matrix.os == 'windows-latest'
+        run: cmake --build --preset win-msvc-release --config Release --target install
+
+      - name: Configure (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: cmake --preset linux-release
+        env: { VCPKG_ROOT: ${{ env.VCPKG_ROOT }} }
+
+      - name: Build+Install (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: cmake --build --preset linux-release --target install
+
+      - name: Configure (macOS)
+        if: matrix.os == 'macos-latest'
+        run: cmake --preset macos-release
+        env: { VCPKG_ROOT: ${{ env.VCPKG_ROOT }} }
+
+      - name: Build+Install (macOS)
+        if: matrix.os == 'macos-latest'
+        run: cmake --build --preset macos-release --target install
+
+      - name: Upload artifact (Windows)
+        if: matrix.os == 'windows-latest'
+        uses: actions/upload-artifact@v4
+        with: { name: glfw-no-api-win, path: out/win }
+
+      - name: Upload artifact (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        uses: actions/upload-artifact@v4
+        with: { name: glfw-no-api-linux, path: out/linux }
+
+      - name: Upload artifact (macOS)
+        if: matrix.os == 'macos-latest'
+        uses: actions/upload-artifact@v4
+        with: { name: glfw-no-api-macos, path: out/macos }

@@ -11,14 +11,8 @@ find_package(glfw3 CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
 find_package(tinyobjloader CONFIG REQUIRED)
 find_package(imgui CONFIG REQUIRED)   # provides imgui::imgui (with backends if features enabled)
+find_package(glad CONFIG REQUIRED)
 
-# ---------------- glad (bundled) ----------------
-add_library(glad STATIC
-  ${CMAKE_CURRENT_SOURCE_DIR}/include/thirdparty/glad/src/glad.c
-)
-target_include_directories(glad PUBLIC
-  ${CMAKE_CURRENT_SOURCE_DIR}/include/thirdparty/glad/include
-)
 
 # ---------------- core (GL-free) ----------------
 add_library(core STATIC)
@@ -93,20 +87,14 @@ if (EXISTS "${IMGUI_VENDOR_BACKENDS_DIR}/imgui_impl_glfw.cpp" AND
   )
   target_include_directories(imgui_backends PUBLIC ${IMGUI_VENDOR_BACKENDS_DIR})
   target_compile_definitions(imgui_backends PUBLIC IMGUI_IMPL_OPENGL_LOADER_GLAD)
-  target_link_libraries(imgui_backends PUBLIC imgui::imgui glfw glad)
+  target_link_libraries(imgui_backends PUBLIC imgui::imgui glfw glad::glad)
   target_link_libraries(app_core PUBLIC imgui_backends)
-else()
-  # vcpkg features path (no .cpp files exposed): just link the library.
-  target_link_libraries(app_core PUBLIC imgui::imgui)
 endif()
 
-# Link remaining deps
 target_link_libraries(app_core
-  PUBLIC
-    glad glfw
-    glm::glm tinyobjloader::tinyobjloader
+  PUBLIC  glm::glm glfw glad::glad tinyobjloader::tinyobjloader core
+  PRIVATE $<$<TARGET_EXISTS:imgui_backends>:imgui_backends> imgui::imgui
 )
-
 # ---------------- exe ---------------------------
 add_executable(glfw_no_api src/main.cpp)
 target_link_libraries(glfw_no_api PRIVATE app_core core)
@@ -134,3 +122,15 @@ if (ENABLE_TESTS)
   target_include_directories(core_tests PRIVATE core/include)
   add_test(NAME core_tests COMMAND core_tests)
 endif()
+
+# -------- install targets (runtime layout) --------
+install(TARGETS glfw_no_api RUNTIME DESTINATION .)
+
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/assets  DESTINATION .)
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/shaders DESTINATION .)
+
+# -------- CPack zip (optional local packaging) --------
+set(CPACK_PACKAGE_NAME "glfw-no-api")
+set(CPACK_PACKAGE_VERSION "0.1.0")
+set(CPACK_GENERATOR "ZIP")
+include(CPack)

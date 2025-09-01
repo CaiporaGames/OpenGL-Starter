@@ -1,44 +1,155 @@
 Detecting compiler hash for triplet x64-windows...
 Compiler found: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe
-The following packages will be built and installed:
-  * egl-registry:x64-windows@2024-01-25
-    glad[core,loader]:x64-windows@0.1.36
-    glfw3:x64-windows@3.4#1
-    glm:x64-windows@1.0.1#3
-    imgui[core,glfw-binding,opengl3-binding]:x64-windows@1.91.9
-  * opengl-registry:x64-windows@2024-02-10#1
-    tinyobjloader:x64-windows@2.0.0rc13
+Detecting compiler hash for triplet x64-windows-static...
+Compiler found: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe
+The following packages are already installed:
   * vcpkg-cmake:x64-windows@2024-04-23
   * vcpkg-cmake-config:x64-windows@2024-05-23
+The following packages will be removed:
+    egl-registry:x64-windows
+    glad:x64-windows
+    glfw3:x64-windows
+    glm:x64-windows
+    imgui:x64-windows
+    opengl-registry:x64-windows
+    tinyobjloader:x64-windows
+The following packages will be built and installed:
+  * egl-registry:x64-windows-static@2024-01-25
+    glad[core,loader]:x64-windows-static@0.1.36
+    glfw3:x64-windows-static@3.4#1
+    glm:x64-windows-static@1.0.1#3
+    imgui[core,glfw-binding,opengl3-binding]:x64-windows-static@1.91.9
+  * opengl-registry:x64-windows-static@2024-02-10#1
+    tinyobjloader:x64-windows-static@2.0.0rc13
 Additional packages (*) will be modified to complete this operation.
-Restored 9 package(s) from C:\Users\timot\AppData\Local\vcpkg\archives in 669 ms. Use --debug to see more details.
-Installing 1/9 vcpkg-cmake-config:x64-windows@2024-05-23...
-Elapsed time to handle vcpkg-cmake-config:x64-windows: 8.35 ms
-vcpkg-cmake-config:x64-windows package ABI: 683f7ac131f9fec0597f411ce6c105ee93dd4b2b53c80b297cce6bba17b1df76
-Installing 2/9 vcpkg-cmake:x64-windows@2024-04-23...
-Elapsed time to handle vcpkg-cmake:x64-windows: 16.4 ms
-vcpkg-cmake:x64-windows package ABI: cc022b910607f5cc7227c2cd2f45a08df7d4c67304db47e98f59b06fdff19c29
-Installing 3/9 egl-registry:x64-windows@2024-01-25...
-Elapsed time to handle egl-registry:x64-windows: 15.4 ms
-egl-registry:x64-windows package ABI: 6f1461efb8043266b3a357d211ea4cecefbf4d5e4c8633bfe495b669160ef4f3
-Installing 4/9 opengl-registry:x64-windows@2024-02-10#1...
-Elapsed time to handle opengl-registry:x64-windows: 39.7 ms
-opengl-registry:x64-windows package ABI: 0ad5269101480a0bf7377c6a908d218cd9059c3fca21f1239e65d16432249d6a
-Installing 5/9 glad[core,loader]:x64-windows@0.1.36...
-Elapsed time to handle glad:x64-windows: 29.4 ms
-glad:x64-windows package ABI: 8765a10a39d916e7723a6162725275ada4e0ca58fe17421b8165e333e47585b6
-Installing 6/9 glfw3:x64-windows@3.4#1...
-Elapsed time to handle glfw3:x64-windows: 23.3 ms
-glfw3:x64-windows package ABI: 1c60051198520da2678348e21c42dd29148822f0edd544faf573092b0689e24d
-Installing 7/9 glm:x64-windows@1.0.1#3...
-Elapsed time to handle glm:x64-windows: 212 ms
-glm:x64-windows package ABI: 0d712b6bd0e6aa35c7a5606b1bd2746f72a1d26c8456783274ac079b581a1941
-Installing 8/9 imgui[core,glfw-binding,opengl3-binding]:x64-windows@1.91.9...
-Elapsed time to handle imgui:x64-windows: 41.1 ms
-imgui:x64-windows package ABI: 9c2efc85a96e1923fda7fbc4a6d62b4e3098586e7d310784b98ab5a885085cf0
-Installing 9/9 tinyobjloader:x64-windows@2.0.0rc13...
-Elapsed time to handle tinyobjloader:x64-windows: 20.6 ms
-tinyobjloader:x64-windows package ABI: d5abc1bf4cc0fd522827cb58fb4a3a27d2281b25a7356549d8900071cf84ee5a
+Restored 0 package(s) from C:\Users\timot\AppData\Local\vcpkg\archives in 1.61 ms. Use --debug to see more details.
+Removing 1/14 tinyobjloader:x64-windows
+Elapsed time to handle tinyobjloader:x64-windows: 15.9 ms
+Removing 2/14 imgui:x64-windows
+Elapsed time to handle imgui:x64-windows: 27.9 ms
+Removing 3/14 glm:x64-windows
+Elapsed time to handle glm:x64-windows: 216 ms
+Removing 4/14 glfw3:x64-windows
+Elapsed time to handle glfw3:x64-windows: 21.9 ms
+Removing 5/14 glad:x64-windows
+Elapsed time to handle glad:x64-windows: 24.4 ms
+Removing 6/14 opengl-registry:x64-windows
+Elapsed time to handle opengl-registry:x64-windows: 34.7 ms
+Removing 7/14 egl-registry:x64-windows
+Elapsed time to handle egl-registry:x64-windows: 9.4 ms
+Installing 8/14 egl-registry:x64-windows-static@2024-01-25...
+Building egl-registry:x64-windows-static@2024-01-25...
+-- Using cached KhronosGroup-EGL-Registry-7db3005d4c2cb439f129a0adc931f3274f9019e6.tar.gz
+-- Cleaning sources at C:/vcpkg/buildtrees/egl-registry/src/274f9019e6-49d6bdb34a.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/vcpkg/downloads/KhronosGroup-EGL-Registry-7db3005d4c2cb439f129a0adc931f3274f9019e6.tar.gz
+-- Using source at C:/vcpkg/buildtrees/egl-registry/src/274f9019e6-49d6bdb34a.clean
+-- Installing: C:/vcpkg/packages/egl-registry_x64-windows-static/share/egl-registry/copyright
+-- Performing post-build validation
+Starting submission of egl-registry:x64-windows-static@2024-01-25 to 1 binary cache(s) in the background
+Elapsed time to handle egl-registry:x64-windows-static: 695 ms
+egl-registry:x64-windows-static package ABI: 6c4366210309ca2b7e741bf68a0f0998a2ca2533d4e2ae3acb2f25df5895a9c9
+Installing 9/14 opengl-registry:x64-windows-static@2024-02-10#1...
+Building opengl-registry:x64-windows-static@2024-02-10#1...
+-- Using cached KhronosGroup-OpenGL-Registry-3530768138c5ba3dfbb2c43c830493f632f7ea33.tar.gz
+-- Cleaning sources at C:/vcpkg/buildtrees/opengl-registry/src/f632f7ea33-4952f9ace9.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/vcpkg/downloads/KhronosGroup-OpenGL-Registry-3530768138c5ba3dfbb2c43c830493f632f7ea33.tar.gz
+-- Using source at C:/vcpkg/buildtrees/opengl-registry/src/f632f7ea33-4952f9ace9.clean
+-- Installing: C:/vcpkg/packages/opengl-registry_x64-windows-static/share/opengl-registry/copyright
+-- Performing post-build validation
+Starting submission of opengl-registry:x64-windows-static@2024-02-10#1 to 1 binary cache(s) in the background
+Elapsed time to handle opengl-registry:x64-windows-static: 3.1 s
+opengl-registry:x64-windows-static package ABI: a1ab200c9cd3f0b0544c984ea8cd87272a3faf9be078f3f492bcfd19940c6934
+Completed submission of egl-registry:x64-windows-static@2024-01-25 to 1 binary cache(s) in 108 ms
+Installing 10/14 glad[core,loader]:x64-windows-static@0.1.36...
+Building glad[core,loader]:x64-windows-static@0.1.36...
+-- Using cached Dav1dde-glad-1ecd45775d96f35170458e6b148eb0708967e402.tar.gz
+-- Cleaning sources at C:/vcpkg/buildtrees/glad/src/708967e402-274d415499.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/vcpkg/downloads/Dav1dde-glad-1ecd45775d96f35170458e6b148eb0708967e402.tar.gz
+-- Applying patch encoding.patch
+-- Applying patch find_python.patch
+-- Using source at C:/vcpkg/buildtrees/glad/src/708967e402-274d415499.clean
+-- This version of glad uses the compatibility profile. To use the core profile instead, create an overlay port of this with GLAD_PROFILE set to 'core' or set GLAD_PROFILE to 'core' in a custom triplet.
+-- This recipe is at C:/vcpkg/ports/glad
+-- See the overlay ports documentation at https://github.com/microsoft/vcpkg/blob/master/docs/specifications/ports-overlay.md
+-- Configuring x64-windows-static
+-- Building x64-windows-static-dbg
+-- Building x64-windows-static-rel
+-- Installing: C:/vcpkg/packages/glad_x64-windows-static/share/glad/copyright
+-- Performing post-build validation
+Starting submission of glad[core,loader]:x64-windows-static@0.1.36 to 1 binary cache(s) in the background
+Elapsed time to handle glad:x64-windows-static: 5.5 s
+glad:x64-windows-static package ABI: f727e90b937cda5bd346cbe645af8182d3b83f2dc2418d09e473d87d103c64d6
+Completed submission of opengl-registry:x64-windows-static@2024-02-10#1 to 1 binary cache(s) in 396 ms
+Installing 11/14 glfw3:x64-windows-static@3.4#1...
+Building glfw3:x64-windows-static@3.4#1...
+-- Using cached glfw-glfw-3.4.tar.gz
+-- Cleaning sources at C:/vcpkg/buildtrees/glfw3/src/3.4-2448ff4533.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/vcpkg/downloads/glfw-glfw-3.4.tar.gz
+-- Using source at C:/vcpkg/buildtrees/glfw3/src/3.4-2448ff4533.clean
+-- Configuring x64-windows-static
+-- Building x64-windows-static-dbg
+-- Building x64-windows-static-rel
+-- Fixing pkgconfig file: C:/vcpkg/packages/glfw3_x64-windows-static/lib/pkgconfig/glfw3.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.4.3-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.2-2-x86_64.pkg.tar.zst
+-- Using msys root at C:/vcpkg/downloads/tools/msys2/9272adbcaf19caef
+-- Fixing pkgconfig file: C:/vcpkg/packages/glfw3_x64-windows-static/debug/lib/pkgconfig/glfw3.pc
+-- Installing: C:/vcpkg/packages/glfw3_x64-windows-static/share/glfw3/copyright
+-- Performing post-build validation
+Starting submission of glfw3:x64-windows-static@3.4#1 to 1 binary cache(s) in the background
+Elapsed time to handle glfw3:x64-windows-static: 6.5 s
+glfw3:x64-windows-static package ABI: 86bb973ceb7f4b2ffbea88ca1d3a7dc280f96738484c155fe8480a11031ac324
+Completed submission of glad[core,loader]:x64-windows-static@0.1.36 to 1 binary cache(s) in 326 ms
+Installing 12/14 glm:x64-windows-static@1.0.1#3...
+Building glm:x64-windows-static@1.0.1#3...
+-- Using cached g-truc-glm-1.0.1.tar.gz
+-- Cleaning sources at C:/vcpkg/buildtrees/glm/src/1.0.1-cf6930f99d.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/vcpkg/downloads/g-truc-glm-1.0.1.tar.gz
+-- Applying patch fix-clang.patch
+-- Using source at C:/vcpkg/buildtrees/glm/src/1.0.1-cf6930f99d.clean
+-- Configuring x64-windows-static
+-- Building x64-windows-static-dbg
+-- Building x64-windows-static-rel
+-- Installing: C:/vcpkg/packages/glm_x64-windows-static/share/glm/copyright
+-- Installing: C:/vcpkg/packages/glm_x64-windows-static/share/glm/usage
+-- Performing post-build validation
+Starting submission of glm:x64-windows-static@1.0.1#3 to 1 binary cache(s) in the background
+Elapsed time to handle glm:x64-windows-static: 11 s
+glm:x64-windows-static package ABI: b203c1e7616d7d21b96c294a4047bf8c8ee844aaea0dc7affcad7b6f48c7d921
+Completed submission of glfw3:x64-windows-static@3.4#1 to 1 binary cache(s) in 523 ms
+Installing 13/14 imgui[core,glfw-binding,opengl3-binding]:x64-windows-static@1.91.9...
+Building imgui[core,glfw-binding,opengl3-binding]:x64-windows-static@1.91.9...
+-- Using cached ocornut-imgui-v1.91.9.tar.gz
+-- Cleaning sources at C:/vcpkg/buildtrees/imgui/src/v1.91.9-afb09617a6.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/vcpkg/downloads/ocornut-imgui-v1.91.9.tar.gz
+-- Using source at C:/vcpkg/buildtrees/imgui/src/v1.91.9-afb09617a6.clean
+-- Configuring x64-windows-static
+-- Building x64-windows-static-dbg
+-- Building x64-windows-static-rel
+-- Installing: C:/vcpkg/packages/imgui_x64-windows-static/share/imgui/copyright
+-- Performing post-build validation
+Starting submission of imgui[core,glfw-binding,opengl3-binding]:x64-windows-static@1.91.9 to 1 binary cache(s) in the background
+Elapsed time to handle imgui:x64-windows-static: 9.9 s
+imgui:x64-windows-static package ABI: 0bfacbd3357d3fba394b13186cb713d36240dd529c5b0760ed0383eb3a513ab1
+Completed submission of glm:x64-windows-static@1.0.1#3 to 1 binary cache(s) in 1.2 s
+Installing 14/14 tinyobjloader:x64-windows-static@2.0.0rc13...
+Building tinyobjloader:x64-windows-static@2.0.0rc13...
+-- Using cached syoyo-tinyobjloader-v2.0.0rc13.tar.gz
+-- Cleaning sources at C:/vcpkg/buildtrees/tinyobjloader/src/v2.0.0rc13-75ee586e9b.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/vcpkg/downloads/syoyo-tinyobjloader-v2.0.0rc13.tar.gz
+-- Using source at C:/vcpkg/buildtrees/tinyobjloader/src/v2.0.0rc13-75ee586e9b.clean
+-- Configuring x64-windows-static
+-- Building x64-windows-static-dbg
+-- Building x64-windows-static-rel
+-- Fixing pkgconfig file: C:/vcpkg/packages/tinyobjloader_x64-windows-static/lib/pkgconfig/tinyobjloader.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.4.3-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.2-2-x86_64.pkg.tar.zst
+-- Using msys root at C:/vcpkg/downloads/tools/msys2/9272adbcaf19caef
+-- Fixing pkgconfig file: C:/vcpkg/packages/tinyobjloader_x64-windows-static/debug/lib/pkgconfig/tinyobjloader.pc
+-- Performing post-build validation
+Starting submission of tinyobjloader:x64-windows-static@2.0.0rc13 to 1 binary cache(s) in the background
+Elapsed time to handle tinyobjloader:x64-windows-static: 6.1 s
+tinyobjloader:x64-windows-static package ABI: 85e2144eecfdd56d90cc03a51ba58143bd8f60be7c26d60c5389793c6dc36657
 Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
 Some packages did not declare an SPDX license. Check the `copyright` file for each package for more information about their licensing.
 Packages installed in this vcpkg installation declare the following licenses:
@@ -87,4 +198,7 @@ tinyobjloader provides pkg-config modules:
   # Tiny but powerful single file wavefront obj loader
   tinyobjloader
 
-All requested installations completed successfully in: 419 ms
+Completed submission of imgui[core,glfw-binding,opengl3-binding]:x64-windows-static@1.91.9 to 1 binary cache(s) in 1.6 s
+Waiting for 1 remaining binary cache submissions...
+Completed submission of tinyobjloader:x64-windows-static@2.0.0rc13 to 1 binary cache(s) in 665 ms (1/1)
+All requested installations completed successfully in: 44 s
