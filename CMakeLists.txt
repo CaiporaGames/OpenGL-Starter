@@ -77,6 +77,7 @@ add_library(app_core STATIC
 set(APP_CORE_ECS_SOURCES
   ${CMAKE_CURRENT_SOURCE_DIR}/src/engine/ecs/Scene.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/engine/camera/CameraComponent.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/engine/camera/FlyController.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/app/QuickActions.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/app/RenderPipeline.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/app/Picking.cpp 

@@ -14,6 +14,7 @@ C:\Dev\glfw-no-api\src\ui\ImGuiLayer.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.
 C:\Dev\glfw-no-api\src\util\Screenshot.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\Screenshot.obj
 C:\Dev\glfw-no-api\src\engine\ecs\Scene.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\Scene.obj
 C:\Dev\glfw-no-api\src\engine\camera\CameraComponent.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\CameraComponent.obj
+C:\Dev\glfw-no-api\src\engine\camera\FlyController.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\FlyController.obj
 C:\Dev\glfw-no-api\src\app\QuickActions.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\QuickActions.obj
 C:\Dev\glfw-no-api\src\app\RenderPipeline.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\RenderPipeline.obj
 C:\Dev\glfw-no-api\src\app\Picking.cpp;C:\Dev\glfw-no-api\build-msvc\app_core.dir\Debug\Picking.obj

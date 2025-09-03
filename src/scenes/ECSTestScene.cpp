@@ -16,6 +16,11 @@ bool ECSTestScene::init(int fbw, int fbh)
     camC.setPrimary(true);
     primaryCam_ = &camC;
 
+    //Fly controller
+    auto& fly = eCam.add<cam::FlyController>();
+    fly.requireRMB = true; //hold RMB to look; set false for permanent mouselook
+    fly_ = &fly;
+
     ecs_.start();
     return true;
 }
@@ -27,8 +32,9 @@ void ECSTestScene::onFramebufferResize(int fbw, int fbh)
     if (primaryCam_) primaryCam_->setViewport(fbw_, fbh_);
 }
 
-void ECSTestScene::update(const FrameInput& /*in*/, float dt)
+void ECSTestScene::update(const FrameInput& in, float dt)
 {
+    if (fly_) fly_->feedInput(in);
     ecs_.update(dt);
 }
 

@@ -9,11 +9,15 @@ struct FrameInputBuilder {
     // Build FrameInput each frame from GLFW
     FrameInput poll(GLFWwindow* w) {
         FrameInput in{};
-        // WASD / arrows (keep your semantics)
-        in.leftUp = glfwGetKey(w, GLFW_KEY_W) == GLFW_PRESS;
-        in.leftDown = glfwGetKey(w, GLFW_KEY_S) == GLFW_PRESS;
-        in.rightUp = glfwGetKey(w, GLFW_KEY_UP) == GLFW_PRESS;
-        in.rightDown = glfwGetKey(w, GLFW_KEY_DOWN) == GLFW_PRESS;
+
+        in.keyW = glfwGetKey(w, GLFW_KEY_W) == GLFW_PRESS;
+        in.keyA = glfwGetKey(w, GLFW_KEY_A) == GLFW_PRESS;
+        in.keyS = glfwGetKey(w, GLFW_KEY_S) == GLFW_PRESS;
+        in.keyD = glfwGetKey(w, GLFW_KEY_D) == GLFW_PRESS;
+        in.keyQ = glfwGetKey(w, GLFW_KEY_Q) == GLFW_PRESS;
+        in.keyE = glfwGetKey(w, GLFW_KEY_E) == GLFW_PRESS;
+        in.keySpace = glfwGetKey(w, GLFW_KEY_SPACE) == GLFW_PRESS;
+        in.keyC = glfwGetKey(w, GLFW_KEY_C) == GLFW_PRESS;
 
         double mx, my; glfwGetCursorPos(w, &mx, &my);
         const bool lDown = glfwGetMouseButton(w, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS;

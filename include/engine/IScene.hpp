@@ -9,9 +9,17 @@ struct App; // fwd
 // Per-frame input (extendable without touching scenes)
 struct FrameInput
 {
+    // Movement keys for 3D/editor input
+    bool keyW = false;
+    bool keyA = false;
+    bool keyS = false;
+    bool keyD = false;
+    bool keyQ = false;
+    bool keyE = false;
+    bool keySpace = false;
+    bool keyC = false;
     // --- Existing (pong/menu) ---
-    bool leftUp = false, leftDown = false;
-    bool rightUp = false, rightDown = false;
+    
     double mouseX = 0.0, mouseY = 0.0;
     bool mouseLeftDown = false, mouseLeftPressed = false, mouseLeftReleased = false;
 

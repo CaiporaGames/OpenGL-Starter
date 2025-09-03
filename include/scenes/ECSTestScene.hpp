@@ -3,11 +3,14 @@
 #include "engine/ecs/Scene.hpp"
 #include "engine/ecs/Transform.hpp"
 #include "engine/camera/CameraComponent.hpp"
+#include "engine/camera/FlyController.hpp"
+
 
 struct ECSTestScene : IScene 
 {
     ecs::Scene ecs_;
     cam::CameraComponent* primaryCam_ = nullptr;
+    cam::FlyController* fly_ = nullptr;
     OrthoCamera2D uiCam_;
     int fbw_ = 1, fbh_ = 1;
 

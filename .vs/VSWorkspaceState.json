@@ -7,16 +7,17 @@
   },
   "ExpandedNodes": [
     "",
+    "\\core",
+    "\\core\\include",
+    "\\core\\include\\core",
+    "\\core\\include\\core\\io",
     "\\include",
     "\\include\\engine",
-    "\\include\\engine\\ecs",
-    "\\include\\scenes",
+    "\\include\\engine\\camera",
     "\\src",
-    "\\src\\app",
     "\\src\\engine",
-    "\\src\\engine\\camera",
-    "\\src\\scenes"
+    "\\src\\engine\\camera"
   ],
-  "SelectedNode": "\\src\\app\\App.cpp",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }

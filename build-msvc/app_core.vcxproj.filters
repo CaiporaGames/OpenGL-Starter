@@ -49,6 +49,9 @@
     <ClCompile Include="C:\Dev\glfw-no-api\src\engine\camera\CameraComponent.cpp">
       <Filter>src\engine\camera</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\engine\camera\FlyController.cpp">
+      <Filter>src\engine\camera</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Dev\glfw-no-api\src\app\QuickActions.cpp">
       <Filter>src\app</Filter>
     </ClCompile>

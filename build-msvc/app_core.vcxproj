@@ -313,6 +313,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </None>
     <ClCompile Include="C:\Dev\glfw-no-api\src\engine\ecs\Scene.cpp" />
     <ClCompile Include="C:\Dev\glfw-no-api\src\engine\camera\CameraComponent.cpp" />
+    <ClCompile Include="C:\Dev\glfw-no-api\src\engine\camera\FlyController.cpp" />
     <ClCompile Include="C:\Dev\glfw-no-api\src\app\QuickActions.cpp" />
     <ClCompile Include="C:\Dev\glfw-no-api\src\app\RenderPipeline.cpp" />
     <ClCompile Include="C:\Dev\glfw-no-api\src\app\Picking.cpp" />
