@@ -24,6 +24,7 @@
 #include "ui/ImGuiLayer.hpp"
 #include "gfx/GLDebug.hpp"
 #include "util/Screenshot.hpp"
+#include "render/DrawList.hpp"
 
 class App 
 {
@@ -96,6 +97,10 @@ public:
     MeshGL& unitCubeMesh() { return loadedGL_; }
     const core::BVH& bvh() { return bvh_; }
 
+    DrawList& drawList() { return drawList_; }
+    const DrawList& drawList() const { return drawList_; }
+    void clearDrawList() { drawList_.clear(); }
+
 private:
     GLFWwindow* window_ = nullptr;
     SpriteBatch spriteBatch_;
@@ -166,4 +171,6 @@ private:
     //Tiny rolling FPS graph - last 120 frames
     float fpsHistory_[120] = { 0.0f };
     int fpsHead_ = 0;
+
+    DrawList drawList_;
 };

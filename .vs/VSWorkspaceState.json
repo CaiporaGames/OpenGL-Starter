@@ -8,16 +8,11 @@
   "ExpandedNodes": [
     "",
     "\\core",
-    "\\core\\include",
-    "\\core\\include\\core",
-    "\\core\\include\\core\\io",
     "\\include",
-    "\\include\\engine",
-    "\\include\\engine\\camera",
-    "\\src",
-    "\\src\\engine",
-    "\\src\\engine\\camera"
+    "\\include\\render",
+    "\\include\\thirdparty",
+    "\\include\\ui",
+    "\\include\\util"
   ],
-  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }

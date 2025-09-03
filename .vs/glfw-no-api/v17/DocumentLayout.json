@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Dev\\glfw-no-api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\core\\include\\core\\io\\obj_loader.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:core\\include\\core\\io\\obj_loader.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\core\\include\\core\\frustum.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:core\\include\\core\\frustum.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\include\\app\\App.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:include\\app\\App.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\include\\render\\DrawList.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:include\\render\\DrawList.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\include\\engine\\ecs\\MeshRenderer.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:include\\engine\\ecs\\MeshRenderer.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
@@ -17,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\core\\include\\core\\mesh_data.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:core\\include\\core\\mesh_data.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\core\\include\\core\\frustum.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:core\\include\\core\\frustum.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\glfw-no-api\\core\\include\\core\\bvh.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -103,6 +119,55 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "obj_loader.hpp",
+              "DocumentMoniker": "C:\\Dev\\glfw-no-api\\core\\include\\core\\io\\obj_loader.hpp",
+              "RelativeDocumentMoniker": "core\\include\\core\\io\\obj_loader.hpp",
+              "ToolTip": "C:\\Dev\\glfw-no-api\\core\\include\\core\\io\\obj_loader.hpp",
+              "RelativeToolTip": "core\\include\\core\\io\\obj_loader.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-03T15:15:12.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.hpp",
+              "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\app\\App.hpp",
+              "RelativeDocumentMoniker": "include\\app\\App.hpp",
+              "ToolTip": "C:\\Dev\\glfw-no-api\\include\\app\\App.hpp",
+              "RelativeToolTip": "include\\app\\App.hpp",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAqwGsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-03T14:26:00.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DrawList.hpp",
+              "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\render\\DrawList.hpp",
+              "RelativeDocumentMoniker": "include\\render\\DrawList.hpp",
+              "ToolTip": "C:\\Dev\\glfw-no-api\\include\\render\\DrawList.hpp",
+              "RelativeToolTip": "include\\render\\DrawList.hpp",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-03T14:21:47.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MeshRenderer.hpp",
+              "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\engine\\ecs\\MeshRenderer.hpp",
+              "RelativeDocumentMoniker": "include\\engine\\ecs\\MeshRenderer.hpp",
+              "ToolTip": "C:\\Dev\\glfw-no-api\\include\\engine\\ecs\\MeshRenderer.hpp",
+              "RelativeToolTip": "include\\engine\\ecs\\MeshRenderer.hpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-03T14:17:05.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -110,12 +175,11 @@
               "RelativeToolTip": ".gitignore",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-09-03T13:54:16.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:54:16.015Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "raycast.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\core\\include\\core\\raycast.hpp",
               "RelativeDocumentMoniker": "core\\include\\core\\raycast.hpp",
@@ -123,12 +187,11 @@
               "RelativeToolTip": "core\\include\\core\\raycast.hpp",
               "ViewState": "AgIAAD0AAAAAAAAAAAAYwFEAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T13:47:11.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:47:11.211Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "ray.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\core\\include\\core\\ray.hpp",
               "RelativeDocumentMoniker": "core\\include\\core\\ray.hpp",
@@ -136,12 +199,11 @@
               "RelativeToolTip": "core\\include\\core\\ray.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T13:47:06.018Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:47:06.018Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "mesh_data.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\core\\include\\core\\mesh_data.hpp",
               "RelativeDocumentMoniker": "core\\include\\core\\mesh_data.hpp",
@@ -149,25 +211,23 @@
               "RelativeToolTip": "core\\include\\core\\mesh_data.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T13:47:00.329Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:47:00.329Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "frustum.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\core\\include\\core\\frustum.hpp",
               "RelativeDocumentMoniker": "core\\include\\core\\frustum.hpp",
               "ToolTip": "C:\\Dev\\glfw-no-api\\core\\include\\core\\frustum.hpp",
               "RelativeToolTip": "core\\include\\core\\frustum.hpp",
-              "ViewState": "AgIAADAAAAAAAAAAAAAQwE8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T13:46:54.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:46:54.771Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "bvh.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\core\\include\\core\\bvh.hpp",
               "RelativeDocumentMoniker": "core\\include\\core\\bvh.hpp",
@@ -175,12 +235,11 @@
               "RelativeToolTip": "core\\include\\core\\bvh.hpp",
               "ViewState": "AgIAAEgBAAAAAAAAAAAQwGcBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T13:46:50.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:46:50.252Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "aabb.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\core\\include\\core\\aabb.hpp",
               "RelativeDocumentMoniker": "core\\include\\core\\aabb.hpp",
@@ -188,12 +247,11 @@
               "RelativeToolTip": "core\\include\\core\\aabb.hpp",
               "ViewState": "AgIAACcAAAAAAAAAAAAQwEYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T13:46:41.788Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:46:41.788Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "QuickActions.cpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\src\\app\\QuickActions.cpp",
               "RelativeDocumentMoniker": "src\\app\\QuickActions.cpp",
@@ -201,12 +259,11 @@
               "RelativeToolTip": "src\\app\\QuickActions.cpp",
               "ViewState": "AgIAABwAAAAAAAAAAAAQwDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-03T13:46:09.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:46:09.455Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "RenderPipeline.cpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\src\\app\\RenderPipeline.cpp",
               "RelativeDocumentMoniker": "src\\app\\RenderPipeline.cpp",
@@ -214,12 +271,11 @@
               "RelativeToolTip": "src\\app\\RenderPipeline.cpp",
               "ViewState": "AgIAAI8AAAAAAAAAAAAQwK4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-03T13:46:04.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:46:04.106Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "Picking.cpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\src\\app\\Picking.cpp",
               "RelativeDocumentMoniker": "src\\app\\Picking.cpp",
@@ -227,12 +283,11 @@
               "RelativeToolTip": "src\\app\\Picking.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-03T13:45:55.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:45:55.865Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "App.cpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\src\\app\\App.cpp",
               "RelativeDocumentMoniker": "src\\app\\App.cpp",
@@ -240,12 +295,11 @@
               "RelativeToolTip": "src\\app\\App.cpp",
               "ViewState": "AgIAAFsBAAAAAAAAAAAQwHoBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-03T13:45:49.752Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:45:49.752Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "Component.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\engine\\ecs\\Component.hpp",
               "RelativeDocumentMoniker": "include\\engine\\ecs\\Component.hpp",
@@ -253,12 +307,11 @@
               "RelativeToolTip": "include\\engine\\ecs\\Component.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T13:07:19.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:07:19.897Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "Transform.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\engine\\ecs\\Transform.hpp",
               "RelativeDocumentMoniker": "include\\engine\\ecs\\Transform.hpp",
@@ -266,12 +319,11 @@
               "RelativeToolTip": "include\\engine\\ecs\\Transform.hpp",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwCkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T13:45:12.488Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:45:12.488Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "Scene.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\engine\\ecs\\Scene.hpp",
               "RelativeDocumentMoniker": "include\\engine\\ecs\\Scene.hpp",
@@ -279,12 +331,11 @@
               "RelativeToolTip": "include\\engine\\ecs\\Scene.hpp",
               "ViewState": "AgIAAAEAAAAAAAAAAAAQwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T13:45:04.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:45:04.527Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "Entity.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\engine\\ecs\\Entity.hpp",
               "RelativeDocumentMoniker": "include\\engine\\ecs\\Entity.hpp",
@@ -292,12 +343,11 @@
               "RelativeToolTip": "include\\engine\\ecs\\Entity.hpp",
               "ViewState": "AgIAAA8AAAAAAAAAAAAQwC4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T13:44:53.163Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:44:53.163Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "ECSTestScene.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\scenes\\ECSTestScene.hpp",
               "RelativeDocumentMoniker": "include\\scenes\\ECSTestScene.hpp",
@@ -305,12 +355,11 @@
               "RelativeToolTip": "include\\scenes\\ECSTestScene.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T12:26:44.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T12:26:44.613Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "FrameInputBuilder.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\app\\FrameInputBuilder.hpp",
               "RelativeDocumentMoniker": "include\\app\\FrameInputBuilder.hpp",
@@ -318,12 +367,11 @@
               "RelativeToolTip": "include\\app\\FrameInputBuilder.hpp",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T12:21:46.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T12:21:46.641Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "IScene.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\engine\\IScene.hpp",
               "RelativeDocumentMoniker": "include\\engine\\IScene.hpp",
@@ -331,12 +379,11 @@
               "RelativeToolTip": "include\\engine\\IScene.hpp",
               "ViewState": "AgIAAC8AAAAAAAAAAAAQwE4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T12:16:57.338Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T12:16:57.338Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "FlyController.cpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\src\\engine\\camera\\FlyController.cpp",
               "RelativeDocumentMoniker": "src\\engine\\camera\\FlyController.cpp",
@@ -344,12 +391,11 @@
               "RelativeToolTip": "src\\engine\\camera\\FlyController.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-03T11:48:42.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T11:48:42.707Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "FlyController.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\engine\\camera\\FlyController.hpp",
               "RelativeDocumentMoniker": "include\\engine\\camera\\FlyController.hpp",
@@ -357,12 +403,11 @@
               "RelativeToolTip": "include\\engine\\camera\\FlyController.hpp",
               "ViewState": "AgIAAAYAAAAAAAAAAADwvxQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T11:33:16.692Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T11:33:16.692Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "ECSTestScene.cpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\src\\scenes\\ECSTestScene.cpp",
               "RelativeDocumentMoniker": "src\\scenes\\ECSTestScene.cpp",
@@ -370,12 +415,11 @@
               "RelativeToolTip": "src\\scenes\\ECSTestScene.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-03T10:51:02.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T10:51:02.751Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "RenderPipeline.hpp",
               "DocumentMoniker": "C:\\Dev\\glfw-no-api\\include\\app\\RenderPipeline.hpp",
               "RelativeDocumentMoniker": "include\\app\\RenderPipeline.hpp",
