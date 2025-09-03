@@ -1,30 +1,47 @@
-﻿Step 0:
-Install the vcpkg, in my case is in C > vcpkg folder.
-Install the glfw3 using vcpkg: C:\vcpkg\vcpkg.exe install glfw3:x64-windows
-
-Create the folder structure:
-glfw-no-api/
-├─ CMakeLists.txt
-├─ vcpkg.json
-└─ src/
-   └─ main.cpp
+﻿Future looks:
+- callback vs polling:
+	For continuous controls (movement, holding buttons) → polling is fine.
+	For instant events (keypress, text input, resize, clicks) → callbacks are safer.
+	Best practice: use callbacks to fill an input state, then let your game logic read that state each frame.
 
 
+	- Create a class to be the monobehaviour and we can have components like in unity
 
+	- How to use handle several objects to create a game with animations?
 
-On powershell from the root folder:PS C:\Dev\glfw-no-api> in this case is the glfw-no-api.
+	- How to Build Your Own Version Blockbench 
 
-1. Paste this to create the build folder:
-cmake -S . `
-  -B build-msvc `
-  -G "Visual Studio 17 2022" `
-  -A x64 `
-  -DCMAKE_TOOLCHAIN_FILE="C:/vcpkg/scripts/buildsystems/vcpkg.cmake" `
-  -DVCPKG_TARGET_TRIPLET="x64-windows"
+Here’s a roadmap for creating a simplified version for your engine:
+1. Model Editor UI
+- Use a GUI framework (e.g. Dear ImGui, Qt, or SDL)
+- Allow users to place and transform primitive shapes (cubes, planes)
+- Add basic mesh editing (vertex move, face extrude)
+2. Texture Painting
+- Implement a UV viewer and 2D texture editor
+- Support painting directly on the 3D model
+- Load/save textures (PNG, BMP)
+3. Bone Rigging
+- Let users define bones and parent-child relationships
+- Assign mesh parts to bones
+- Visualize bone hierarchy and influence zones
+4. Animation Timeline
+- Create a timeline UI with keyframes
+- Support position, rotation, and scale animations
+- Interpolate between keyframes (linear or cubic)
+5. Export Format
+- Define a custom format (e.g. .mymodel) or use glTF
+- Include mesh, texture, bone, and animation data
+- Make it easy to load in your engine
 
+GUI = Dear ImGui, Qt, Nuklear;
+3D Rendering = OpenGL, Vulkan, DirectX
+Texture Editing = stb_image, ImGui canvas
+File I/O = JSON, glTF, or custom format
+Animation System = Custom keyframe interpolator
 
-2. To build run this:
-cmake --build build-msvc --config Release
-.\build-msvc\Release\glfw_no_api.exe
-Is this one. The above I do not know the first line.
-.\build-msvc\Release\glfw_no_api.exe
+🧪 Start Small
+You don’t need to build everything at once. Start with:
+- A cube-based model editor
+- Texture loading and painting
+- Basic bone rigging and animation playback
+Once that’s working, you can expand into more advanced mesh editing and export formats.

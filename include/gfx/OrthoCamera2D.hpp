@@ -33,6 +33,7 @@ public:
         return height_; 
     }
 
+
     // Scroll wheel: +y = zoom in, -y = zoom out (sens > 1 is multiplicative step)
     void zoomBy(float wheelY, float sens = 1.2f) 
     {

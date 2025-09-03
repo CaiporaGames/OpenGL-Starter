@@ -67,3 +67,36 @@ Abi: 0d712b6bd0e6aa35c7a5606b1bd2746f72a1d26c8456783274ac079b581a1941
 Description: OpenGL Mathematics (GLM)
 Status: install ok installed
 
+Package: imgui
+Version: 1.91.9
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 9c2efc85a96e1923fda7fbc4a6d62b4e3098586e7d310784b98ab5a885085cf0
+Description: Bloat-free Immediate Mode Graphical User interface for C++ with minimal dependencies.
+Status: install ok installed
+
+Package: imgui
+Feature: glfw-binding
+Depends: glfw3
+Architecture: x64-windows
+Multi-Arch: same
+Description: Make available GLFW binding
+Status: install ok installed
+
+Package: imgui
+Feature: opengl3-binding
+Architecture: x64-windows
+Multi-Arch: same
+Description: Make available OpenGL3/ES/ES2 (modern) binding
+Status: install ok installed
+
+Package: tinyobjloader
+Version: 2.0.0rc13
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d5abc1bf4cc0fd522827cb58fb4a3a27d2281b25a7356549d8900071cf84ee5a
+Description: Tiny but powerful single file wavefront obj loader
+Status: install ok installed
+

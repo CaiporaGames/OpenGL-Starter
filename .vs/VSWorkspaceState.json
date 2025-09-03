@@ -7,16 +7,16 @@
   },
   "ExpandedNodes": [
     "",
-    "\\assets",
     "\\include",
-    "\\include\\app",
     "\\include\\engine",
-    "\\shaders",
+    "\\include\\engine\\ecs",
+    "\\include\\scenes",
     "\\src",
     "\\src\\app",
-    "\\src\\game",
-    "\\src\\gfx"
+    "\\src\\engine",
+    "\\src\\engine\\camera",
+    "\\src\\scenes"
   ],
-  "SelectedNode": "\\assets\\Panda.png",
+  "SelectedNode": "\\src\\app\\App.cpp",
   "PreviewInSolutionExplorer": false
 }

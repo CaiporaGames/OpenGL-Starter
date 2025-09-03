@@ -19,16 +19,106 @@
     <ClCompile Include="C:\Dev\glfw-no-api\src\thirdparty\stb_image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Dev\glfw-no-api\src\game\Game.cpp">
+    <ClCompile Include="C:\Dev\glfw-no-api\src\gfx\GLDebug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\render\Mesh3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\render\DebugLines3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\render\DebugCross3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\render\BoxWire3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\render\MeshGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\ui\ImGuiLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\util\Screenshot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\engine\ecs\Scene.cpp">
+      <Filter>src\engine\ecs</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\engine\camera\CameraComponent.cpp">
+      <Filter>src\engine\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\app\QuickActions.cpp">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\app\RenderPipeline.cpp">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\app\Picking.cpp">
+      <Filter>src\app</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\glfw-no-api\src\scenes\ECSTestScene.cpp">
+      <Filter>src\scenes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\gfx\GLDebug.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\render\Mesh3D.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\render\DebugLines3D.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\render\DebugCross3D.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\render\BoxWire3D.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\render\MeshGL.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\ui\ImGuiLayer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\glfw-no-api\include\util\Screenshot.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Dev\glfw-no-api\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="C:\Dev\glfw-no-api\shaders\basic3d.vert" />
+    <None Include="C:\Dev\glfw-no-api\shaders\basic3d.frag" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{1C3B1BE1-6345-3E72-ADE0-AC05B1A923B6}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{0DB92347-489B-3A96-8724-C21806AD18D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{E5FDA27D-F320-3096-A988-B629C98547DA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\app">
+      <UniqueIdentifier>{1368B7D2-1FA8-3B94-99FE-3AB33E04F361}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine">
+      <UniqueIdentifier>{28343AC4-403A-31F5-8095-56B7C89737DE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine\camera">
+      <UniqueIdentifier>{8466D29A-4031-393F-8896-4027774C84D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine\ecs">
+      <UniqueIdentifier>{69BC0901-D2FB-3E1E-8257-53EC06F74BAC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scenes">
+      <UniqueIdentifier>{34DB7675-05A5-3E2D-9AB0-CCD888B99113}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

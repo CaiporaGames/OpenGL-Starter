@@ -7,17 +7,18 @@
 #include "gfx/Shader.hpp"
 #include <glm/mat4x4.hpp> 
 
-struct Sprite {
+struct Sprite 
+{
     glm::vec2 pos;     // bottom-left in pixels
     glm::vec2 size;    // width/height in pixels
     glm::vec4 uv;      // (u0, v0, u1, v1) in 0..1
     glm::vec4 color;   // RGBA (0..1)
 };
 
-class SpriteBatch {
+class SpriteBatch 
+{
 public:
-    bool init(const char* vsPath, const char* fsPath, const char* texturePath,
-        int maxSprites = 2000);
+    bool init(const char* vsPath, const char* fsPath, const char* texturePath, int maxSprites = 2000);
     void shutdown();
 
     // Begin a new frame; provide framebuffer size (for ortho)
@@ -36,7 +37,8 @@ public:
     GLuint texture() const { return m_tex; }
 
 private:
-    struct Vertex {
+    struct Vertex 
+    {
         float x, y;    // position in pixels
         float u, v;    // uv
         float r, g, b, a; // color
@@ -54,10 +56,10 @@ private:
     GLint m_uTex = -1;
     GLint m_uMode = -1;
 
-    int   m_maxSprites = 0;
-    int   m_spriteCount = 0;
+    int m_maxSprites = 0;
+    int m_spriteCount = 0;
 
     // CPU staging buffers (resized to capacity once)
-    std::vector<Vertex>      m_cpuVerts;   // 4 verts per sprite
+    std::vector<Vertex> m_cpuVerts;   // 4 verts per sprite
     std::vector<unsigned int> m_cpuIndices;// 6 indices per sprite
 };

@@ -1,0 +1,8 @@
+build-*/
+out/
+CMakeFiles/
+CMakeCache.txt
+*.user
+*.vcxproj*
+*.sln
+*.code-workspace
